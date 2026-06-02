@@ -1,0 +1,26 @@
+import { DbQueryUtil } from './query.util';
+import { config }      from '@config/env';
+
+/**
+ * Seed Utility — test data setup and teardown helpers.
+ * Only active in local/QA env (DB_ENABLED=true).
+ */
+export class SeedUtil {
+  constructor(private readonly db: DbQueryUtil) {}
+
+  async cleanupEmployeeByFirstName(firstName: string): Promise<void> {
+    if (!config.dbEnabled) return;
+    await this.db.query(
+      `DELETE FROM hs_hr_employee WHERE emp_firstname = ?`,
+      [firstName]
+    );
+  }
+
+  async cleanupEmployeeByEmployeeId(employeeId: string): Promise<void> {
+    if (!config.dbEnabled) return;
+    await this.db.query(
+      `DELETE FROM hs_hr_employee WHERE employee_id = ?`,
+      [employeeId]
+    );
+  }
+}

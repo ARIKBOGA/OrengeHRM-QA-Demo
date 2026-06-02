@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env.local
+.env.staging
+reports/allure-results/
+reports/allure-report/
+reports/test-plans/
+playwright-report/
+test-results/
+*.log
+.DS_Store

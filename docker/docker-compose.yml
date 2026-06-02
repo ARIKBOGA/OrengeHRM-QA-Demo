@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  orangehrm:
+    image: orangehrm/orangehrm:latest
+    container_name: orangehrm
+    ports:
+      - "8080:80"
+    environment:
+      - ORANGEHRM_DATABASE_HOST=db
+      - ORANGEHRM_DATABASE_USER=orangehrm
+      - ORANGEHRM_DATABASE_PASSWORD=orangehrm
+      - ORANGEHRM_DATABASE_NAME=orangehrm
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    image: mysql:8.0
+    container_name: orangehrm-db
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_DATABASE=orangehrm
+      - MYSQL_USER=orangehrm
+      - MYSQL_PASSWORD=orangehrm
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "orangehrm", "-porangehrm"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
