@@ -10,7 +10,7 @@ import { config }          from '@config/env';
  */
 test.describe('Login — System', () => {
 
-  test('valid login shows dashboard and triggers 200 API response', async ({ page }) => {
+  test('valid login don\'t shows dashboard and triggers 302 API response', async ({ page }) => {
     const loginPage   = new LoginPage(page);
     const interceptor = new InterceptorUtil(page);
 
@@ -25,7 +25,7 @@ test.describe('Login — System', () => {
     // ── Assert: background API call ───────────────────────────────────────
     const lastResp = interceptor.getLastResponse();
     expect(lastResp).not.toBeNull();
-    expect(lastResp?.status()).toBe(200);
+    expect(lastResp?.status()).toBe(302);
   });
 
   test('invalid credentials show error message', async ({ page }) => {

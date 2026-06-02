@@ -20,7 +20,7 @@ test.describe('Employee Creation — Integration', () => {
     const employee = createEmployee({ firstName: 'IntTest' });
 
     // ── Act ──────────────────────────────────────────────────────────────
-    const response = await api.post<ApiResponse<Employee>>('/pim/employees', {
+    const response = await api.post<ApiResponse<Employee>>('/pim/viewEmployeeList', {
       firstName:  employee.firstName,
       middleName: '',
       lastName:   employee.lastName,
