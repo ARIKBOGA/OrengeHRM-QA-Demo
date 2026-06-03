@@ -17,7 +17,7 @@ export abstract class BasePage {
   }
 
   /** Override in child pages if the ready signal differs */
-  protected async waitForPageReady(): Promise<void> {
+  public async waitForPageReady(): Promise<void> {
     await this.page.waitForLoadState('networkidle');
   }
 
@@ -25,11 +25,11 @@ export abstract class BasePage {
     return this.page.locator(selector);
   }
 
-  protected getByText(text: string, exact = false): Locator {
+  public getByText(text: string, exact = false): Locator {
     return this.page.getByText(text, { exact });
   }
 
-  protected getByRole(
+  public getByRole(
     role: Parameters<Page['getByRole']>[0],
     options?: Parameters<Page['getByRole']>[1]
   ): Locator {

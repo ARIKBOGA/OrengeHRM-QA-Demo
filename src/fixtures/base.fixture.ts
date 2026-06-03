@@ -6,11 +6,36 @@
  * Usage:
  *   import { test, expect } from '@fixtures/base.fixture';
  */
-import { mergeTests }  from '@playwright/test';
+// src/fixtures/base.fixture.ts
+import { mergeTests, request, APIRequestContext } from '@playwright/test';
 import { authFixture } from './auth.fixture';
 import { apiFixture } from './api.fixture';
 import { dbFixture } from './db.fixture';
 import { test as pomTest } from './pom.fixture';
+import { config } from '@config/env';
 
-export const test   = mergeTests(authFixture, apiFixture, dbFixture, pomTest);
-export { expect }   from '@playwright/test';
+type AuthenticatedApiFixture = {
+  authenticatedApi: APIRequestContext;
+};
+
+const mergedTest = mergeTests(authFixture, apiFixture, dbFixture, pomTest);
+
+export const test = mergedTest.extend<AuthenticatedApiFixture>({
+  authenticatedApi: async ({ authContext }, use) => {
+    const storageState = await authContext.storageState();
+    const cookie = storageState.cookies.find((c) => c.name === '_orangehrm');
+    const ctx = await request.newContext({
+      baseURL: 'http://localhost:8080',
+      extraHTTPHeaders: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        Cookie: `_orangehrm=${cookie?.value ?? ''}`,
+      },
+    });
+
+    await use(ctx);
+    await ctx.dispose();
+  },
+});
+
+export { expect } from '@playwright/test';

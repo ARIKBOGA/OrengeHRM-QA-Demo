@@ -1,7 +1,7 @@
-import { test, expect }      from '@fixtures/base.fixture';
-import { RequestUtil }       from '@utils/api/request.util';
-import { DbAssertionUtil }   from '@utils/db/assertion.util';
-import { createEmployee }    from '@data/factories/employee.factory';
+import { test, expect } from '@fixtures/base.fixture';
+import { RequestUtil } from '@utils/api/request.util';
+import { DbAssertionUtil } from '@utils/db/assertion.util';
+import { createEmployee } from '@data/factories/employee.factory';
 import type { ApiResponse, Employee } from '@t/api.types';
 
 /**
@@ -11,19 +11,16 @@ import type { ApiResponse, Employee } from '@t/api.types';
  * No UI involved.
  */
 test.describe('Employee Creation — Integration', () => {
-
-  test('POST /pim/employees persists employee in DB', async ({
-    authenticatedApi, db
-  }) => {
-    const api      = new RequestUtil(authenticatedApi);
+  test('POST /pim/employees persists employee in DB', async ({ authenticatedApi, db }) => {
+    const api = new RequestUtil(authenticatedApi);
     const dbAssert = new DbAssertionUtil(db);
     const employee = createEmployee({ firstName: 'IntTest' });
 
     // ── Act ──────────────────────────────────────────────────────────────
-    const response = await api.post<ApiResponse<Employee>>('/pim/viewEmployeeList', {
-      firstName:  employee.firstName,
+    const response = await api.post<ApiResponse<Employee>>('/web/index.php/api/v2/pim/employees', {
+      firstName: employee.firstName,
       middleName: '',
-      lastName:   employee.lastName,
+      lastName: employee.lastName,
     });
 
     // ── Assert: API response ──────────────────────────────────────────────
@@ -35,5 +32,4 @@ test.describe('Employee Creation — Integration', () => {
       emp_number: response.data.empNumber,
     });
   });
-
 });

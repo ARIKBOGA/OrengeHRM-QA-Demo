@@ -4,11 +4,11 @@ import { BasePage } from '../base.page';
 export class EmployeeListPage extends BasePage {
   readonly path = '/web/index.php/pim/viewEmployeeList';
 
-  private get searchButton() {
+  public get searchButton() {
     return this.getByRole('button', { name: 'Search' });
   }
 
-  private get employeeNameInput() {
+  public get employeeNameInput() {
     return this.locator('.oxd-input').first();
   }
 

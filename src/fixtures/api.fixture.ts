@@ -8,12 +8,10 @@
  * Token is fetched once and reused within the fixture scope.
  */
 import { test as base, APIRequestContext, request } from '@playwright/test';
-import { ApiAuthUtil } from '@utils/api/auth.util';
-import { config }      from '@config/env';
+import { config } from '@config/env';
 
 type ApiFixtures = {
-  apiContext:       APIRequestContext;
-  authenticatedApi: APIRequestContext;
+  apiContext: APIRequestContext;
 };
 
 export const apiFixture = base.extend<ApiFixtures>({
@@ -30,30 +28,4 @@ export const apiFixture = base.extend<ApiFixtures>({
     await ctx.dispose();
   },
 
-  authenticatedApi: async ({}, use) => {
-    const ctx = await request.newContext({
-      baseURL: config.apiBaseUrl,
-      extraHTTPHeaders: {
-        'Content-Type': 'application/json',
-        'Accept':       'application/json',
-      },
-    });
-
-    // Fetch and inject OAuth2 Bearer token
-    const authUtil = new ApiAuthUtil(ctx);
-    const token    = await authUtil.getToken();
-
-    const authedCtx = await request.newContext({
-      baseURL: config.apiBaseUrl,
-      extraHTTPHeaders: {
-        'Content-Type':  'application/json',
-        'Accept':        'application/json',
-        'Authorization': `Bearer ${token}`,
-      },
-    });
-
-    await ctx.dispose();
-    await use(authedCtx);
-    await authedCtx.dispose();
-  },
 });

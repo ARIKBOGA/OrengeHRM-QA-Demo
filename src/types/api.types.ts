@@ -9,6 +9,8 @@ export interface ApiResponse<T> {
     total: number;
     [key: string]: unknown;
   };
+  status: number;
+  message?: string;
 }
 
 export interface Employee {
