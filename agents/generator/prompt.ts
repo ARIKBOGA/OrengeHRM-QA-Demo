@@ -1,8 +1,4 @@
-export function buildGeneratorPrompt(
-  testPlanContent: string,
-  sourceContext: Record<string, string>
-): string {
-
+export function buildGeneratorPrompt(testPlanContent: string, sourceContext: Record<string, string>): string {
   const sourceFiles = Object.entries(sourceContext)
     .map(([filePath, content]) => `### ${filePath}\n\`\`\`typescript\n${content}\n\`\`\``)
     .join('\n\n');
@@ -21,6 +17,34 @@ You are a Senior QA Automation Engineer generating Playwright TypeScript tests.
 8. DELETE endpoint: POST body with { ids: [empNumber] } to /web/index.php/api/v2/pim/employees
 9. Always use try/finally for teardown
 10. auth.fixture.ts authContext scope is 'worker' — do not change this
+11. FULL API PATH IS MANDATORY — always prefix with /web/index.php:
+    WRONG: /api/v2/pim/employees
+    CORRECT: /web/index.php/api/v2/pim/employees
+    This applies to every single API call, no exceptions.
+12. response.status DOES NOT EXIST on parsed responses — RequestUtil returns parsed JSON directly.
+    NEVER do: expect(response.status).toBe(200)
+    If 200 is needed: RequestUtil.assertOk() already throws on non-200. No need to assert status.
+    For negative tests needing status: use raw authenticatedApi + RequestUtil.buildPath manually, 
+    OR add a new method to RequestUtil that returns raw response.
+
+13. NEVER use authenticatedApi directly in tests — always use RequestUtil which handles 
+    cookie injection via buildPath. Direct authenticatedApi calls bypass cookie auth.
+
+14. employeeId CANNOT be set via POST /pim/employees body — OrangeHRM ignores it.
+    Remove employeeId from POST payload entirely.
+
+15. DELETE endpoint for PIM employees:
+    METHOD: DELETE (not POST)
+    URL: /web/index.php/api/v2/pim/employees
+    BODY: { ids: [empNumber] }
+    Use RequestUtil.delete() — but it needs body support.
+
+16. PUT personal details correct endpoint:
+    PUT /web/index.php/api/v2/pim/employees/{empNumber}/personal-details
+    NOT: PUT /web/index.php/api/v2/pim/employees/{empNumber}
+
+17. Non-existent employee DELETE returns 404, not 200.
+    OrangeHRM does NOT return 200 for batch delete of non-existent IDs.
 
 ## ACTUAL SOURCE FILES — USE ONLY WHAT EXISTS HERE
 

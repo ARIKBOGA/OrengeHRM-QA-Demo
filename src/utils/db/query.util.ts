@@ -39,7 +39,8 @@ export class DbQueryUtil {
       console.warn('[DB] query() called but no connection — DB_ENABLED=false or connect() not called');
       return [];
     }
-    const [rows] = await this.connection.execute<T[]>(sql, params);
+    // cast params to any to satisfy mysql2 overloads (values can be various types)
+    const [rows] = await this.connection.execute<T[]>(sql, params as any);
     return rows;
   }
 
