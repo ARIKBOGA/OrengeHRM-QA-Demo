@@ -1,5 +1,5 @@
 import { DbQueryUtil } from './query.util';
-import { config }      from '@config/env';
+import { config } from '@config/env';
 
 /**
  * Seed Utility — test data setup and teardown helpers.
@@ -10,17 +10,16 @@ export class SeedUtil {
 
   async cleanupEmployeeByFirstName(firstName: string): Promise<void> {
     if (!config.dbEnabled) return;
-    await this.db.query(
-      `DELETE FROM hs_hr_employee WHERE emp_firstname = ?`,
-      [firstName]
-    );
+    await this.db.query(`DELETE FROM hs_hr_employee WHERE emp_firstname = ?`, [firstName]);
   }
 
   async cleanupEmployeeByEmployeeId(employeeId: string): Promise<void> {
     if (!config.dbEnabled) return;
-    await this.db.query(
-      `DELETE FROM hs_hr_employee WHERE employee_id = ?`,
-      [employeeId]
-    );
+    await this.db.query(`DELETE FROM hs_hr_employee WHERE employee_id = ?`, [employeeId]);
+  }
+
+  async cleanupEmployeeByEmpNumber(empNumber: number): Promise<void> {
+    if (!config.dbEnabled) return;
+    await this.db.query('DELETE FROM hs_hr_employee WHERE emp_number = ?', [empNumber]);
   }
 }

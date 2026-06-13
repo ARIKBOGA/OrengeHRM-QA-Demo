@@ -1,4 +1,4 @@
-import { APIRequestContext } from '@playwright/test';
+import { APIRequestContext, expect } from '@playwright/test';
 
 /**
  * API Request Utility — typed wrapper around Playwright's APIRequestContext.
@@ -41,6 +41,20 @@ export class RequestUtil {
     if (!response.ok()) {
       throw new Error(`${method} ${endpoint} failed with status ${response.status()}`);
     }
+
+    // Validate expected status codes based on HTTP method
+    switch (method) {
+      case 'POST':
+      case 'PUT':
+        expect([200, 201]).toContain(response.status());
+        break;
+      case 'GET':
+        expect(response.status()).toBe(200);
+        break;
+      case 'DELETE':
+        expect([200, 204]).toContain(response.status());
+        break;
+    }
   }
 
   async postRaw(endpoint: string, body: unknown) {
@@ -49,5 +63,9 @@ export class RequestUtil {
 
   async putRaw(endpoint: string, body: unknown) {
     return this.ctx.put(this.buildPath(endpoint), { data: body });
+  }
+
+  async deleteRaw(endpoint: string, body?: unknown) {
+    return this.ctx.delete(this.buildPath(endpoint), body ? { data: body } : undefined);
   }
 }
