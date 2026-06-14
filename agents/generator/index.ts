@@ -5,7 +5,16 @@ import path from 'path';
 
 function readSrc(relativePath: string): string {
   const fullPath = path.resolve(relativePath);
-  return fs.existsSync(fullPath) ? fs.readFileSync(fullPath, 'utf-8') : `// FILE NOT FOUND: ${relativePath}`;
+  return fs.existsSync(fullPath) 
+    ? fs.readFileSync(fullPath, 'utf-8') 
+    : `// FILE NOT FOUND: ${relativePath}`;
+}
+
+function readContext(filename: string): string {
+  const fullPath = path.resolve(`src/context/${filename}`);
+  return fs.existsSync(fullPath)
+    ? fs.readFileSync(fullPath, 'utf-8')
+    : `// CONTEXT FILE NOT FOUND: ${filename} — run npm run context:extract`;
 }
 
 function parseGeneratedFiles(raw: string): Array<{ filePath: string; content: string }> {
@@ -47,31 +56,40 @@ async function main() {
 
   const testPlanContent = fs.readFileSync(absolutePlanPath, 'utf-8');
 
-  // Gerçek kaynak dosyalarını oku — Gemini bunları görecek
+  // ── Framework kaynak dosyaları ─────────────────────────────────────────────
   const sourceContext = {
-    'src/fixtures/base.fixture.ts':              readSrc('src/fixtures/base.fixture.ts'),
-    'src/fixtures/auth.fixture.ts':              readSrc('src/fixtures/auth.fixture.ts'),
-    'src/fixtures/api.fixture.ts':               readSrc('src/fixtures/api.fixture.ts'),
-    'src/fixtures/db.fixture.ts':                readSrc('src/fixtures/db.fixture.ts'),
-    'src/fixtures/pom.fixture.ts':               readSrc('src/fixtures/pom.fixture.ts'),
-    'src/pages/base.page.ts':                    readSrc('src/pages/base.page.ts'),
-    'src/pages/login.page.ts':                   readSrc('src/pages/login.page.ts'),
-    'src/pages/employee/add-employee.page.ts':   readSrc('src/pages/employee/add-employee.page.ts'),
-    'src/pages/employee/employee-list.page.ts':  readSrc('src/pages/employee/employee-list.page.ts'),
-    'src/utils/api/request.util.ts':             readSrc('src/utils/api/request.util.ts'),
-    'src/utils/api/interceptor.util.ts':         readSrc('src/utils/api/interceptor.util.ts'),
-    'src/utils/db/assertion.util.ts':            readSrc('src/utils/db/assertion.util.ts'),
-    'src/utils/db/seed.util.ts':                 readSrc('src/utils/db/seed.util.ts'),
-    'src/data/factories/employee.factory.ts':    readSrc('src/data/factories/employee.factory.ts'),
-    'src/types/api.types.ts':                    readSrc('src/types/api.types.ts'),
-    'src/config/env.ts':                         readSrc('src/config/env.ts'),
+    'src/fixtures/base.fixture.ts':             readSrc('src/fixtures/base.fixture.ts'),
+    'src/fixtures/auth.fixture.ts':             readSrc('src/fixtures/auth.fixture.ts'),
+    'src/fixtures/api.fixture.ts':              readSrc('src/fixtures/api.fixture.ts'),
+    'src/fixtures/db.fixture.ts':               readSrc('src/fixtures/db.fixture.ts'),
+    'src/fixtures/pom.fixture.ts':              readSrc('src/fixtures/pom.fixture.ts'),
+    'src/pages/base.page.ts':                   readSrc('src/pages/base.page.ts'),
+    'src/pages/login.page.ts':                  readSrc('src/pages/login.page.ts'),
+    'src/pages/employee/add-employee.page.ts':  readSrc('src/pages/employee/add-employee.page.ts'),
+    'src/pages/employee/employee-list.page.ts': readSrc('src/pages/employee/employee-list.page.ts'),
+    'src/utils/api/request.util.ts':            readSrc('src/utils/api/request.util.ts'),
+    'src/utils/api/interceptor.util.ts':        readSrc('src/utils/api/interceptor.util.ts'),
+    'src/utils/db/assertion.util.ts':           readSrc('src/utils/db/assertion.util.ts'),
+    'src/utils/db/seed.util.ts':                readSrc('src/utils/db/seed.util.ts'),
+    'src/data/factories/employee.factory.ts':   readSrc('src/data/factories/employee.factory.ts'),
+    'src/types/api.types.ts':                   readSrc('src/types/api.types.ts'),
+    'src/config/env.ts':                        readSrc('src/config/env.ts'),
+  };
+
+  // ── Ground truth context ───────────────────────────────────────────────────
+  const groundTruth = {
+    'api-contracts':    readContext('api-contracts.md'),
+    'db-schema':        readContext('db-schema.md'),
+    'known-behaviors':  readContext('known-behaviors.md'),
   };
 
   console.info(`🤖 Generator Agent — reading plan: ${absolutePlanPath}`);
   console.info('🧠 Generating test files with Gemini...');
 
   const gemini = GeminiClient.getInstance();
-  const raw    = await gemini.generate(buildGeneratorPrompt(testPlanContent, sourceContext));
+  const raw    = await gemini.generate(
+    buildGeneratorPrompt(testPlanContent, sourceContext, groundTruth)
+  );
   const files  = parseGeneratedFiles(raw);
 
   if (files.length === 0) {

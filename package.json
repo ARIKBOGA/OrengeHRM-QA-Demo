@@ -10,6 +10,7 @@
         "test:smoke": "playwright test tests/e2e/smoke --project=e2e",
         "test:local": "ENV=local playwright test",
         "test:staging": "ENV=staging playwright test",
+        "context:extract": "ts-node scripts/extract-context.ts",
         "report": "allure generate reports/allure-results -o reports/allure-report --clean && allure open reports/allure-report",
         "agent:plan": "ts-node agents/planner/index.ts",
         "agent:generate": "ts-node agents/generator/index.ts",
