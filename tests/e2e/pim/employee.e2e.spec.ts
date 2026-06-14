@@ -16,7 +16,7 @@ test.describe('PIM Employee E2E Scenarios', { annotation: [{ type: 'Feature', de
   });
 
   test('E2E-001: Full Employee Lifecycle (Create, Read, Delete)', { annotation: [{ type: 'Test ID', description: 'E2E-001' }, { type: 'Layer', description: 'E2E' }] }, async ({ addEmployeePage, employeeListPage, authenticatedPage }) => {
-    const employeeData = createEmployee({ middleName: 'E2E', employeeId: `E2E_${Date.now()}` });
+    const employeeData = createEmployee({ middle_name: 'E2E', employeeId: `E2E_${Date.now()}` });
     let empNumber: number | undefined;
     const interceptor = new InterceptorUtil(authenticatedPage);
 

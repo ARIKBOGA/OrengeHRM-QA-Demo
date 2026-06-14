@@ -1,4 +1,4 @@
-import { expect }   from '@playwright/test';
+import { expect } from '@playwright/test';
 import { BasePage } from '../base.page';
 
 export class EmployeeListPage extends BasePage {
@@ -27,7 +27,7 @@ export class EmployeeListPage extends BasePage {
   }
 
   async expectEmployeeVisible(name: string): Promise<void> {
-    await expect(this.locator('.oxd-table-cell').filter({ hasText: name })).toBeVisible();
+    await expect(this.locator('.oxd-table-body .oxd-table-row').filter({ hasText: name }).first()).toBeVisible();
   }
 
   async getRecordCount(): Promise<number> {
@@ -35,4 +35,4 @@ export class EmployeeListPage extends BasePage {
     const match = text?.match(/\d+/);
     return match ? parseInt(match[0]) : 0;
   }
-}// TODO
+} // TODO
