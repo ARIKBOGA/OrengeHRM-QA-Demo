@@ -16,7 +16,7 @@
         "agent:generate": "ts-node agents/generator/index.ts",
         "agent:heal": "ts-node agents/healer/index.ts",
         "docker:up": "docker compose -f docker/docker-compose.yml up -d",
-        "docker:down": "docker compose -f docker/docker-compose.yml down",
+        "docker:down": "docker compose -f docker/docker-compose.yml down -v",
         "typecheck": "tsc --noEmit"
     },
     "dependencies": {
