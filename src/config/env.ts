@@ -26,9 +26,9 @@ const EnvSchema = z.object({
   ADMIN_USERNAME: z.string().default('Admin'),
   ADMIN_PASSWORD: z.string().default('admin123'),
   GEMINI_API_KEY: z.string().min(1, 'GEMINI_API_KEY is required'),
-  GITHUB_TOKEN: z.string().optional(),
-  GITHUB_OWNER: z.string().optional(),
-  GITHUB_REPO: z.string().optional(),
+  GH_TOKEN: z.string().optional(),
+  GH_OWNER: z.string().optional(),
+  GH_REPO: z.string().optional(),
   OAUTH_CLIENT_ID: z.string().optional(),
   OAUTH_CLIENT_SECRET: z.string().optional(),
   OAUTH_USERNAME: z.string().optional(),
@@ -66,8 +66,8 @@ export const config = {
   geminiApiKey: data.GEMINI_API_KEY,
 
   github: {
-    token: data.GITHUB_TOKEN,
-    owner: data.GITHUB_OWNER,
-    repo: data.GITHUB_REPO,
+    token: data.GH_TOKEN,
+    owner: data.GH_OWNER,
+    repo: data.GH_REPO,
   },
 } as const;

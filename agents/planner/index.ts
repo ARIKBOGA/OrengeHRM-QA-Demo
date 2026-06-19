@@ -4,20 +4,20 @@ import fs   from 'fs';
 import path from 'path';
 
 async function fetchIssue(issueNumber: string) {
-  const { GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO } = process.env;
+  const { GH_TOKEN, GH_OWNER, GH_REPO } = process.env;
 
   const response = await fetch(
-    `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/issues/${issueNumber}`,
+    `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/issues/${issueNumber}`,
     {
       headers: {
-        'Authorization': `Bearer ${GITHUB_TOKEN}`,
+        'Authorization': `Bearer ${GH_TOKEN}`,
         'Accept':        'application/vnd.github.v3+json',
       },
     }
   );
 
   if (!response.ok) {
-    throw new Error(`GitHub API failed: ${response.status} — Check GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO`);
+    throw new Error(`GitHub API failed: ${response.status} — Check GH_TOKEN, GH_OWNER, GH_REPO`);
   }
 
   const data = await response.json() as { title: string; body: string };
