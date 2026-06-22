@@ -1,10 +1,9 @@
 export function buildHealerPrompt(
-  specContent:   string,
-  errorReport:   string,
+  specContent: string,
+  errorReport: string,
   sourceContext: Record<string, string>,
-  groundTruth:   Record<string, string>
+  groundTruth: Record<string, string>
 ): string {
-
   const sourceFiles = Object.entries(sourceContext)
     .map(([p, c]) => `### ${p}\n\`\`\`typescript\n${c}\n\`\`\``)
     .join('\n\n');
@@ -62,6 +61,26 @@ You are a Senior QA Automation Engineer. Your task is to fix a failing Playwrigh
    Use short fixed strings like \`'Smith'\` or \`'Doe'\`.
 
 10. **HTTP 200 for all operations** — never expect 201 or 204.
+
+11. **AddEmployeePage.save() has its own internal waitForResponse** for the same
+    /api/v2/pim/employees regex used by an external InterceptorUtil in the test.
+    Running both simultaneously causes a race condition and timeout, especially
+    when extra fields (e.g. employeeId) are filled. Bypass the internal one:
+    \`\`\`typescript
+    // WRONG
+    await addEmployeePage.save();
+
+    // CORRECT — when an external InterceptorUtil is already capturing
+    await authenticatedPage.getByRole('button', { name: 'Save' }).click();
+    \`\`\`
+
+12. **Employee Name search is partial/substring match, not exact.** A short
+    search term (e.g. a single first name) can match leftover/dirty data from
+    other tests (e.g. "Search" matches "IDSearch"). When a test explicitly
+    expects an exact-match result count, search by full name instead:
+    \`\`\`typescript
+    await employeeListPage.searchByName(\`\${employeeData.firstName} \${employeeData.lastName}\`);
+    \`\`\`
 
 ## GROUND TRUTH
 
