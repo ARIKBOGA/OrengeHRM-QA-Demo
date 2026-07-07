@@ -82,6 +82,68 @@ You are a Senior QA Automation Engineer. Your task is to fix a failing Playwrigh
     await employeeListPage.searchByName(\`\${employeeData.firstName} \${employeeData.lastName}\`);
     \`\`\`
 
+13. **Employee Name search field is a typeahead/autocomplete component** — \`.fill()\`
+    alone does not commit the value to the component's internal model; the search
+    silently runs unfiltered (returning the total system record count, which always
+    includes at least one permanent employee — the Admin user's own PIM record).
+    Always blur/close the dropdown before clicking Search:
+    \`\`\`typescript
+    await this.employeeNameInput.fill(name);
+    await this.employeeNameInput.press('Escape');
+    await this.searchButton.click();
+    \`\`\`
+   
+14. **getRecordCount() must count actual table rows, not parse a "(N) Records Found"
+    text label.** That text component is unreliable at zero-result state (may not
+    update, or may reflect an unrelated counter) and produced consistent false
+    positives. Always count real DOM rows:
+    \`\`\`typescript
+    async getRecordCount(): Promise<number> {
+      return this.tableRows.count();
+    }
+    \`\`\`
+    Correspondingly, do not assert on a "No Records Found" text label being visible —
+    it may not render reliably in this app version. Assert \`getRecordCount() === 0\`
+    instead, which is sufficient proof of an empty result set.
+
+15. **OrangeHRM shows "No Records Found" in TWO places simultaneously** on an empty
+    search result: a persistent <span> in the table area, and a transient toast
+    <p> notification. A page-wide getByText('No Records Found') causes a strict
+    mode violation. Scope to the span specifically:
+    \`\`\`typescript
+    await expect(
+      page.locator('span.oxd-text--span').filter({ hasText: 'No Records Found' })
+    ).toBeVisible();
+    \`\`\`
+
+16. **Never read a DOM-dependent count with a one-shot .count() call and compare
+    it with expect().toBe() — this races against the app's client-side render
+    (e.g. Vue re-rendering a table after an XHR resolves, which can lag behind
+    waitForLoadState('networkidle')). This passes reliably in --debug (slow
+    stepping) but flakes headless. Always use Playwright's auto-retrying
+    assertion instead:
+    \`\`\`typescript
+    // WRONG — snapshot read, no retry
+    expect(await page.getRecordCount()).toBe(0);
+
+    // CORRECT — retries until the DOM settles or times out
+    await expect(page.tableRows).toHaveCount(0);
+    \`\`\`
+
+17. **GET /api/v2/pim/employees with an empNumber filter for a DELETED/non-existent
+    employee returns 422, not 200 with an empty array.** Do not use RequestUtil.get()
+    (which enforces status 200) for post-deletion existence checks. Use getRaw()
+    and accept either outcome as proof of absence:
+    \`\`\`typescript
+    const raw = await requestUtil.getRaw('/api/v2/pim/employees', { empNumber });
+    if (raw.status() === 200) {
+      const body = await raw.json();
+      expect(body.data.some((emp) => emp.empNumber === empNumber)).toBe(false);
+    } else {
+      expect(raw.status()).toBe(422);
+    }
+    \`\`\`
+
 ## GROUND TRUTH
 
 ${contextFiles}
