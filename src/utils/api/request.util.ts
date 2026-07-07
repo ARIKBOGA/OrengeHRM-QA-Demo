@@ -42,19 +42,12 @@ export class RequestUtil {
       throw new Error(`${method} ${endpoint} failed with status ${response.status()}`);
     }
 
-    // Validate expected status codes based on HTTP method
-    switch (method) {
-      case 'POST':
-      case 'PUT':
-        expect([200, 201]).toContain(response.status());
-        break;
-      case 'GET':
-        expect(response.status()).toBe(200);
-        break;
-      case 'DELETE':
-        expect([200, 204]).toContain(response.status());
-        break;
-    }
+    // #10: HTTP 200 for all operations — never expect 201 or 204.
+    expect(response.status()).toBe(200);
+  }
+
+  async getRaw(endpoint: string, params?: Record<string, string | number>) {
+    return this.ctx.get(this.buildPath(endpoint), { params: params as Record<string, string> });
   }
 
   async postRaw(endpoint: string, body: unknown) {
