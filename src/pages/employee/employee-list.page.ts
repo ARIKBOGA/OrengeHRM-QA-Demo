@@ -9,11 +9,14 @@ export class EmployeeListPage extends BasePage {
   }
 
   public get employeeNameInput() {
-    return this.locator('.oxd-input').first();
+    return this.getByRole('textbox', { name: 'Type for hints...' }).first();
   }
 
   private get recordsFound() {
     return this.locator('.oxd-text--span').filter({ hasText: 'Record' });
+  }
+  async getRecordCount(): Promise<number> {
+    return this.tableRows.count();
   }
 
   private get tableRows() {
@@ -21,7 +24,9 @@ export class EmployeeListPage extends BasePage {
   }
 
   async searchByName(name: string): Promise<void> {
-    await this.employeeNameInput.fill(name);
+    await this.employeeNameInput.click();
+    await this.employeeNameInput.clear();
+    await this.employeeNameInput.pressSequentially(name, { delay: 50 });
     await this.searchButton.click();
     await this.waitForPageReady();
   }
@@ -30,9 +35,11 @@ export class EmployeeListPage extends BasePage {
     await expect(this.locator('.oxd-table-body .oxd-table-row').filter({ hasText: name }).first()).toBeVisible();
   }
 
-  async getRecordCount(): Promise<number> {
-    const text = await this.recordsFound.textContent();
-    const match = text?.match(/\d+/);
-    return match ? parseInt(match[0]) : 0;
+  async expectNoRecordsFound(): Promise<void> {
+    await expect(this.locator('span.oxd-text--span').filter({ hasText: 'No Records Found' })).toBeVisible();
   }
-} // TODO
+
+  async expectRecordCount(count: number): Promise<void> {
+    await expect(this.tableRows).toHaveCount(count);
+  }
+}
