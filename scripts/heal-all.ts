@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
+import { resolveSpecPath } from './lib/resolve-spec-path';
 
 const INDEX_PATH = path.resolve('reports/last-failures/_index.json');
 
@@ -20,11 +21,18 @@ function main(): void {
   console.info(`🔧 Healing ${files.length} file(s), sequentially...\n`);
 
   for (const file of files) {
-    console.info(`\n=== Healing: ${file} ===`);
+    let resolved: string;
     try {
-      execSync(`npx ts-node agents/healer/index.ts --spec=${file}`, { stdio: 'inherit' });
+      resolved = path.relative(process.cwd(), resolveSpecPath(file)).replace(/\\/g, '/');
+    } catch (err) {
+      console.error(`❌ Skipping unresolvable path: ${file}`);
+      continue;
+    }
+    console.info(`\n=== Healing: ${resolved} ===`);
+    try {
+      execSync(`npx ts-node agents/healer/index.ts --spec=${resolved}`, { stdio: 'inherit' });
     } catch {
-      console.error(`❌ Healer failed for ${file} — continuing with next file.`);
+      console.error(`❌ Healer failed for ${resolved} — continuing with next file.`);
     }
   }
 
