@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { specToSlug } from './lib/spec-slug';
+import { resolveSpecPath } from './lib/resolve-spec-path';
 
 const RESULTS_PATH = path.resolve('reports/results.json');
 const FAILURES_DIR = path.resolve('reports/last-failures');
@@ -39,9 +40,7 @@ function main(): void {
     collectTests(suite, allTests);
   }
 
-  const failed = allTests.filter(({ test }) =>
-    test.results?.some((r: any) => r.status === 'failed' || r.status === 'timedOut')
-  );
+  const failed = allTests.filter(({ test }) => test.results?.some((r: any) => r.status === 'failed' || r.status === 'timedOut'));
 
   resetFailuresDir();
 
@@ -85,10 +84,12 @@ function main(): void {
       md += '---\n\n';
     }
 
-    const slug = specToSlug(file);
+    const resolvedFile = resolveSpecPath(file);
+    const relativeFile = path.relative(process.cwd(), resolvedFile).replace(/\\/g, '/');
+    const slug = specToSlug(relativeFile);
     fs.writeFileSync(path.join(FAILURES_DIR, `${slug}.md`), md, 'utf-8');
-    writtenFiles.push(file);
-    console.info(`📝 ${file} → ${entries.length} failing test(s)`);
+    writtenFiles.push(relativeFile);
+    console.info(`📝 ${relativeFile} → ${entries.length} failing test(s)`);
   }
 
   fs.writeFileSync(INDEX_PATH, JSON.stringify({ files: writtenFiles }, null, 2));

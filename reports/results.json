@@ -139,12 +139,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2448,
+                      "duration": 1896,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:30:32.935Z",
+                      "startTime": "2026-07-07T20:30:40.903Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -173,12 +173,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1562,
+                      "duration": 1535,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:30:35.844Z",
+                      "startTime": "2026-07-07T20:30:43.022Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -224,7 +224,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2331,
+                      "duration": 2043,
                       "errors": [],
                       "stdout": [
                         {
@@ -236,7 +236,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:30:37.432Z",
+                      "startTime": "2026-07-07T20:30:44.578Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -263,7 +263,7 @@
         {
           "title": "PIM Employee System Tests",
           "file": "system/pim/employee.spec.ts",
-          "line": 16,
+          "line": 20,
           "column": 6,
           "specs": [
             {
@@ -279,7 +279,7 @@
                       "description": "PIM Module - Employee Management (UI & API/DB)",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 16,
+                        "line": 20,
                         "column": 6
                       }
                     },
@@ -288,7 +288,7 @@
                       "description": "PIM-C-001",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 23,
+                        "line": 27,
                         "column": 7
                       }
                     },
@@ -297,7 +297,7 @@
                       "description": "System, E2E",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 23,
+                        "line": 27,
                         "column": 7
                       }
                     },
@@ -307,7 +307,7 @@
                     },
                     {
                       "type": "Teardown Action",
-                      "description": "Deleting employee with empNumber: 222"
+                      "description": "Deleting employee with empNumber: 346"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -318,7 +318,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2300,
+                      "duration": 2155,
                       "errors": [],
                       "stdout": [
                         {
@@ -330,14 +330,14 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:30:41.509Z",
+                      "startTime": "2026-07-07T20:30:48.305Z",
                       "annotations": [
                         {
                           "type": "Feature",
                           "description": "PIM Module - Employee Management (UI & API/DB)",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 16,
+                            "line": 20,
                             "column": 6
                           }
                         },
@@ -346,7 +346,7 @@
                           "description": "PIM-C-001",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 23,
+                            "line": 27,
                             "column": 7
                           }
                         },
@@ -355,7 +355,7 @@
                           "description": "System, E2E",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 23,
+                            "line": 27,
                             "column": 7
                           }
                         },
@@ -365,7 +365,7 @@
                         },
                         {
                           "type": "Teardown Action",
-                          "description": "Deleting employee with empNumber: 222"
+                          "description": "Deleting employee with empNumber: 346"
                         }
                       ],
                       "attachments": []
@@ -376,12 +376,12 @@
               ],
               "id": "bee1601fa4b43aba1af6-db6c6d57905ec7ebfd9c",
               "file": "system/pim/employee.spec.ts",
-              "line": 23,
+              "line": 27,
               "column": 7
             },
             {
               "title": "PIM-C-002: Create Employee - All Fields (UI)",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -392,7 +392,7 @@
                       "description": "PIM Module - Employee Management (UI & API/DB)",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 16,
+                        "line": 20,
                         "column": 6
                       }
                     },
@@ -401,7 +401,7 @@
                       "description": "PIM-C-002",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 91,
+                        "line": 94,
                         "column": 7
                       }
                     },
@@ -410,13 +410,17 @@
                       "description": "System, E2E",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 91,
+                        "line": 94,
                         "column": 7
                       }
                     },
                     {
                       "type": "Test Data",
-                      "description": "{\"firstName\":\"Jane\",\"lastName\":\"Smith\",\"middleName\":\"M.\",\"employeeId\":\"EMP-1782145843933\"}"
+                      "description": "{\"firstName\":\"Jane\",\"lastName\":\"Smith\",\"middleName\":\"M.\"}"
+                    },
+                    {
+                      "type": "Teardown Action",
+                      "description": "Deleting employee with empNumber: 347"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -426,28 +430,9 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 16319,
-                      "error": {
-                        "message": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"\n=========================== logs ===========================\nwaiting for response /\\/web\\/index\\.php\\/api\\/v2\\/pim\\/employees/\n============================================================",
-                        "stack": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"\n=========================== logs ===========================\nwaiting for response /\\/web\\/index\\.php\\/api\\/v2\\/pim\\/employees/\n============================================================\n    at AddEmployeePage.interceptResponse (/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/src/pages/base.page.ts:56:17)\n    at AddEmployeePage.save (/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/src/pages/employee/add-employee.page.ts:37:16)\n    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:128:31",
-                        "location": {
-                          "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/src/pages/base.page.ts",
-                          "column": 17,
-                          "line": 56
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m../src/pages/base.page.ts:56\n\n\u001b[0m \u001b[90m 54 |\u001b[39m   ) {\n \u001b[90m 55 |\u001b[39m     \u001b[36mconst\u001b[39m [response] \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 56 |\u001b[39m       \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForResponse(urlPattern)\u001b[33m,\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 57 |\u001b[39m       action()\u001b[33m,\u001b[39m\n \u001b[90m 58 |\u001b[39m     ])\u001b[33m;\u001b[39m\n \u001b[90m 59 |\u001b[39m     \u001b[36mreturn\u001b[39m response\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/src/pages/base.page.ts",
-                            "column": 17,
-                            "line": 56
-                          },
-                          "message": "TimeoutError: page.waitForResponse: Timeout 15000ms exceeded while waiting for event \"response\"\n=========================== logs ===========================\nwaiting for response /\\/web\\/index\\.php\\/api\\/v2\\/pim\\/employees/\n============================================================\n\n\u001b[90m   at \u001b[39m../src/pages/base.page.ts:56\n\n\u001b[0m \u001b[90m 54 |\u001b[39m   ) {\n \u001b[90m 55 |\u001b[39m     \u001b[36mconst\u001b[39m [response] \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 56 |\u001b[39m       \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForResponse(urlPattern)\u001b[33m,\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 57 |\u001b[39m       action()\u001b[33m,\u001b[39m\n \u001b[90m 58 |\u001b[39m     ])\u001b[33m;\u001b[39m\n \u001b[90m 59 |\u001b[39m     \u001b[36mreturn\u001b[39m response\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at AddEmployeePage.interceptResponse (/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/src/pages/base.page.ts:56:17)\u001b[22m\n\u001b[2m    at AddEmployeePage.save (/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/src/pages/employee/add-employee.page.ts:37:16)\u001b[22m\n\u001b[2m    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:128:31\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 2146,
+                      "errors": [],
                       "stdout": [
                         {
                           "text": "[DB] Connected to MySQL at localhost:3306/orangehrm\n"
@@ -458,14 +443,14 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:30:43.826Z",
+                      "startTime": "2026-07-07T20:30:50.480Z",
                       "annotations": [
                         {
                           "type": "Feature",
                           "description": "PIM Module - Employee Management (UI & API/DB)",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 16,
+                            "line": 20,
                             "column": 6
                           }
                         },
@@ -474,7 +459,7 @@
                           "description": "PIM-C-002",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 91,
+                            "line": 94,
                             "column": 7
                           }
                         },
@@ -483,45 +468,28 @@
                           "description": "System, E2E",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 91,
+                            "line": 94,
                             "column": 7
                           }
                         },
                         {
                           "type": "Test Data",
-                          "description": "{\"firstName\":\"Jane\",\"lastName\":\"Smith\",\"middleName\":\"M.\",\"employeeId\":\"EMP-1782145843933\"}"
-                        }
-                      ],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--a3f28-e-Employee---All-Fields-UI--system/test-failed-1.png"
+                          "description": "{\"firstName\":\"Jane\",\"lastName\":\"Smith\",\"middleName\":\"M.\"}"
                         },
                         {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--a3f28-e-Employee---All-Fields-UI--system/test-failed-2.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--a3f28-e-Employee---All-Fields-UI--system/error-context.md"
+                          "type": "Teardown Action",
+                          "description": "Deleting employee with empNumber: 347"
                         }
                       ],
-                      "errorLocation": {
-                        "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/src/pages/base.page.ts",
-                        "column": 17,
-                        "line": 56
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "bee1601fa4b43aba1af6-815660dc728c6437b8d5",
               "file": "system/pim/employee.spec.ts",
-              "line": 91,
+              "line": 94,
               "column": 7
             },
             {
@@ -537,7 +505,7 @@
                       "description": "PIM Module - Employee Management (UI & API/DB)",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 16,
+                        "line": 20,
                         "column": 6
                       }
                     },
@@ -546,7 +514,7 @@
                       "description": "PIM-C-003",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 168,
+                        "line": 174,
                         "column": 7
                       }
                     },
@@ -555,7 +523,7 @@
                       "description": "System, E2E",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 168,
+                        "line": 174,
                         "column": 7
                       }
                     },
@@ -569,10 +537,10 @@
                   "projectName": "system",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2237,
+                      "duration": 2082,
                       "errors": [],
                       "stdout": [
                         {
@@ -584,14 +552,14 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:31:00.984Z",
+                      "startTime": "2026-07-07T20:30:52.655Z",
                       "annotations": [
                         {
                           "type": "Feature",
                           "description": "PIM Module - Employee Management (UI & API/DB)",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 16,
+                            "line": 20,
                             "column": 6
                           }
                         },
@@ -600,7 +568,7 @@
                           "description": "PIM-C-003",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 168,
+                            "line": 174,
                             "column": 7
                           }
                         },
@@ -609,7 +577,7 @@
                           "description": "System, E2E",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 168,
+                            "line": 174,
                             "column": 7
                           }
                         },
@@ -626,12 +594,12 @@
               ],
               "id": "bee1601fa4b43aba1af6-df1c422ba34ed8eb4b89",
               "file": "system/pim/employee.spec.ts",
-              "line": 168,
+              "line": 174,
               "column": 7
             },
             {
               "title": "PIM-R-001: Search Employee - By Full Name (Exact Match)",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -642,7 +610,7 @@
                       "description": "PIM Module - Employee Management (UI & API/DB)",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 16,
+                        "line": 20,
                         "column": 6
                       }
                     },
@@ -651,7 +619,7 @@
                       "description": "PIM-R-001",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 216,
+                        "line": 222,
                         "column": 7
                       }
                     },
@@ -660,17 +628,17 @@
                       "description": "System, E2E",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 216,
+                        "line": 222,
                         "column": 7
                       }
                     },
                     {
                       "type": "Test Data",
-                      "description": "{\"firstName\":\"Search\",\"lastName\":\"Name\",\"middleName\":\"By\"}"
+                      "description": "{\"firstName\":\"SR-gfd5y4xbk1\",\"lastName\":\"NM-gfd5y4xbk1\",\"middleName\":\"By\"}"
                     },
                     {
                       "type": "Teardown Action",
-                      "description": "Deleting employee with empNumber: 223"
+                      "description": "Deleting employee with empNumber: 348"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -678,30 +646,11 @@
                   "projectName": "system",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 1565,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:254:57",
-                        "location": {
-                          "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                          "column": 57,
-                          "line": 254
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 252 |\u001b[39m         \u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mexpectEmployeeVisible(employeeData\u001b[33m.\u001b[39mfirstName)\u001b[33m;\u001b[39m\n \u001b[90m 253 |\u001b[39m         \u001b[90m// #6: getRecordCount() returns Promise\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 254 |\u001b[39m         expect(\u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mgetRecordCount())\u001b[33m.\u001b[39mtoBe(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 255 |\u001b[39m       } \u001b[36mfinally\u001b[39m {\n \u001b[90m 256 |\u001b[39m         \u001b[90m// #3: Use seedUtil.cleanupEmployeeByEmpNumber(empNumber)\u001b[39m\n \u001b[90m 257 |\u001b[39m         \u001b[36mif\u001b[39m (empNumber) {\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "column": 57,
-                            "line": 254
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m1\u001b[39m\nReceived: \u001b[31m2\u001b[39m\n\n\u001b[0m \u001b[90m 252 |\u001b[39m         \u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mexpectEmployeeVisible(employeeData\u001b[33m.\u001b[39mfirstName)\u001b[33m;\u001b[39m\n \u001b[90m 253 |\u001b[39m         \u001b[90m// #6: getRecordCount() returns Promise\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 254 |\u001b[39m         expect(\u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mgetRecordCount())\u001b[33m.\u001b[39mtoBe(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 255 |\u001b[39m       } \u001b[36mfinally\u001b[39m {\n \u001b[90m 256 |\u001b[39m         \u001b[90m// #3: Use seedUtil.cleanupEmployeeByEmpNumber(empNumber)\u001b[39m\n \u001b[90m 257 |\u001b[39m         \u001b[36mif\u001b[39m (empNumber) {\u001b[0m\n\u001b[2m    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:254:57\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 2906,
+                      "errors": [],
                       "stdout": [
                         {
                           "text": "[DB] Connected to MySQL at localhost:3306/orangehrm\n"
@@ -712,14 +661,14 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:31:05.162Z",
+                      "startTime": "2026-07-07T20:30:54.751Z",
                       "annotations": [
                         {
                           "type": "Feature",
                           "description": "PIM Module - Employee Management (UI & API/DB)",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 16,
+                            "line": 20,
                             "column": 6
                           }
                         },
@@ -728,7 +677,7 @@
                           "description": "PIM-R-001",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 216,
+                            "line": 222,
                             "column": 7
                           }
                         },
@@ -737,54 +686,33 @@
                           "description": "System, E2E",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 216,
+                            "line": 222,
                             "column": 7
                           }
                         },
                         {
                           "type": "Test Data",
-                          "description": "{\"firstName\":\"Search\",\"lastName\":\"Name\",\"middleName\":\"By\"}"
+                          "description": "{\"firstName\":\"SR-gfd5y4xbk1\",\"lastName\":\"NM-gfd5y4xbk1\",\"middleName\":\"By\"}"
                         },
                         {
                           "type": "Teardown Action",
-                          "description": "Deleting employee with empNumber: 223"
+                          "description": "Deleting employee with empNumber: 348"
                         }
                       ],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--dc1a6---By-Full-Name-Exact-Match--system/test-failed-1.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--dc1a6---By-Full-Name-Exact-Match--system/test-failed-2.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--dc1a6---By-Full-Name-Exact-Match--system/error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "column": 57,
-                        "line": 254
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "bee1601fa4b43aba1af6-71cd01147a3371a78f77",
               "file": "system/pim/employee.spec.ts",
-              "line": 216,
+              "line": 222,
               "column": 7
             },
             {
               "title": "PIM-R-002: Search Employee - By Partial Name",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -795,7 +723,7 @@
                       "description": "PIM Module - Employee Management (UI & API/DB)",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 16,
+                        "line": 20,
                         "column": 6
                       }
                     },
@@ -804,7 +732,7 @@
                       "description": "PIM-R-002",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 265,
+                        "line": 277,
                         "column": 7
                       }
                     },
@@ -813,21 +741,21 @@
                       "description": "System, E2E",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 265,
+                        "line": 277,
                         "column": 7
                       }
                     },
                     {
                       "type": "Test Data",
-                      "description": "[{\"firstName\":\"PartialTest\",\"lastName\":\"A\"},{\"firstName\":\"AnotherPartial\",\"lastName\":\"B\"}]"
+                      "description": "[{\"firstName\":\"PTL-ozbsp6b05e-1\",\"lastName\":\"Alpha\"},{\"firstName\":\"PTL-ozbsp6b05e-2\",\"lastName\":\"Beta\"}]"
                     },
                     {
                       "type": "Teardown Action",
-                      "description": "Deleting employee with empNumber: 224"
+                      "description": "Deleting employee with empNumber: 349"
                     },
                     {
                       "type": "Teardown Action",
-                      "description": "Deleting employee with empNumber: 225"
+                      "description": "Deleting employee with empNumber: 350"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -835,30 +763,11 @@
                   "projectName": "system",
                   "results": [
                     {
-                      "workerIndex": 2,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 1834,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m3\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m3\u001b[39m\n    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:306:57",
-                        "location": {
-                          "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                          "column": 57,
-                          "line": 306
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 304 |\u001b[39m         \u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mexpectEmployeeVisible(employee2\u001b[33m.\u001b[39mfirstName)\u001b[33m;\u001b[39m\n \u001b[90m 305 |\u001b[39m         \u001b[90m// #6: getRecordCount() returns Promise\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 306 |\u001b[39m         expect(\u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mgetRecordCount())\u001b[33m.\u001b[39mtoBe(\u001b[35m2\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 307 |\u001b[39m       } \u001b[36mfinally\u001b[39m {\n \u001b[90m 308 |\u001b[39m         \u001b[90m// #3: Use seedUtil.cleanupEmployeeByEmpNumber(empNumber)\u001b[39m\n \u001b[90m 309 |\u001b[39m         \u001b[90m// Teardown: Delete created employees\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "column": 57,
-                            "line": 306
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m3\u001b[39m\n\n\u001b[0m \u001b[90m 304 |\u001b[39m         \u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mexpectEmployeeVisible(employee2\u001b[33m.\u001b[39mfirstName)\u001b[33m;\u001b[39m\n \u001b[90m 305 |\u001b[39m         \u001b[90m// #6: getRecordCount() returns Promise\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 306 |\u001b[39m         expect(\u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mgetRecordCount())\u001b[33m.\u001b[39mtoBe(\u001b[35m2\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 307 |\u001b[39m       } \u001b[36mfinally\u001b[39m {\n \u001b[90m 308 |\u001b[39m         \u001b[90m// #3: Use seedUtil.cleanupEmployeeByEmpNumber(empNumber)\u001b[39m\n \u001b[90m 309 |\u001b[39m         \u001b[90m// Teardown: Delete created employees\u001b[39m\u001b[0m\n\u001b[2m    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:306:57\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 2382,
+                      "errors": [],
                       "stdout": [
                         {
                           "text": "[DB] Connected to MySQL at localhost:3306/orangehrm\n"
@@ -869,14 +778,14 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:31:07.504Z",
+                      "startTime": "2026-07-07T20:30:57.675Z",
                       "annotations": [
                         {
                           "type": "Feature",
                           "description": "PIM Module - Employee Management (UI & API/DB)",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 16,
+                            "line": 20,
                             "column": 6
                           }
                         },
@@ -885,7 +794,7 @@
                           "description": "PIM-R-002",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 265,
+                            "line": 277,
                             "column": 7
                           }
                         },
@@ -894,58 +803,37 @@
                           "description": "System, E2E",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 265,
+                            "line": 277,
                             "column": 7
                           }
                         },
                         {
                           "type": "Test Data",
-                          "description": "[{\"firstName\":\"PartialTest\",\"lastName\":\"A\"},{\"firstName\":\"AnotherPartial\",\"lastName\":\"B\"}]"
+                          "description": "[{\"firstName\":\"PTL-ozbsp6b05e-1\",\"lastName\":\"Alpha\"},{\"firstName\":\"PTL-ozbsp6b05e-2\",\"lastName\":\"Beta\"}]"
                         },
                         {
                           "type": "Teardown Action",
-                          "description": "Deleting employee with empNumber: 224"
+                          "description": "Deleting employee with empNumber: 349"
                         },
                         {
                           "type": "Teardown Action",
-                          "description": "Deleting employee with empNumber: 225"
+                          "description": "Deleting employee with empNumber: 350"
                         }
                       ],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--2ac6c--Employee---By-Partial-Name-system/test-failed-2.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--2ac6c--Employee---By-Partial-Name-system/test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--2ac6c--Employee---By-Partial-Name-system/error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "column": 57,
-                        "line": 306
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "bee1601fa4b43aba1af6-dc8ea3034810f097de8c",
               "file": "system/pim/employee.spec.ts",
-              "line": 265,
+              "line": 277,
               "column": 7
             },
             {
               "title": "PIM-R-003: Search Employee - By Employee ID",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -956,7 +844,7 @@
                       "description": "PIM Module - Employee Management (UI & API/DB)",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 16,
+                        "line": 20,
                         "column": 6
                       }
                     },
@@ -965,7 +853,7 @@
                       "description": "PIM-R-003",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 322,
+                        "line": 334,
                         "column": 7
                       }
                     },
@@ -974,7 +862,7 @@
                       "description": "System, E2E",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 322,
+                        "line": 334,
                         "column": 7
                       }
                     },
@@ -984,11 +872,11 @@
                     },
                     {
                       "type": "Employee ID",
-                      "description": "empNumber: 226, employeeId: null"
+                      "description": "empNumber: 351, employeeId: ID-wfu0zz"
                     },
                     {
                       "type": "Teardown Action",
-                      "description": "Deleting empNumber: 226"
+                      "description": "Deleting empNumber: 351"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -996,30 +884,11 @@
                   "projectName": "system",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 1586,
-                      "error": {
-                        "message": "Error: locator.fill: value: expected string, got object",
-                        "stack": "Error: locator.fill: value: expected string, got object\n    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:357:37",
-                        "location": {
-                          "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                          "column": 37,
-                          "line": 357
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 355 |\u001b[39m         \u001b[90m// Fill Employee ID search field — second input in the search form\u001b[39m\n \u001b[90m 356 |\u001b[39m         \u001b[36mconst\u001b[39m employeeIdSearchInput \u001b[33m=\u001b[39m authenticatedPage\u001b[33m.\u001b[39mlocator(\u001b[32m'.oxd-input'\u001b[39m)\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 357 |\u001b[39m         \u001b[36mawait\u001b[39m employeeIdSearchInput\u001b[33m.\u001b[39mfill(autoEmployeeId\u001b[33m!\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 358 |\u001b[39m         \u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39msearchButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 359 |\u001b[39m         \u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mwaitForPageReady()\u001b[33m;\u001b[39m\n \u001b[90m 360 |\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "column": 37,
-                            "line": 357
-                          },
-                          "message": "Error: locator.fill: value: expected string, got object\n\n\u001b[0m \u001b[90m 355 |\u001b[39m         \u001b[90m// Fill Employee ID search field — second input in the search form\u001b[39m\n \u001b[90m 356 |\u001b[39m         \u001b[36mconst\u001b[39m employeeIdSearchInput \u001b[33m=\u001b[39m authenticatedPage\u001b[33m.\u001b[39mlocator(\u001b[32m'.oxd-input'\u001b[39m)\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 357 |\u001b[39m         \u001b[36mawait\u001b[39m employeeIdSearchInput\u001b[33m.\u001b[39mfill(autoEmployeeId\u001b[33m!\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 358 |\u001b[39m         \u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39msearchButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 359 |\u001b[39m         \u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mwaitForPageReady()\u001b[33m;\u001b[39m\n \u001b[90m 360 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:357:37\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 1507,
+                      "errors": [],
                       "stdout": [
                         {
                           "text": "[DB] Connected to MySQL at localhost:3306/orangehrm\n"
@@ -1030,14 +899,14 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:31:12.007Z",
+                      "startTime": "2026-07-07T20:31:00.074Z",
                       "annotations": [
                         {
                           "type": "Feature",
                           "description": "PIM Module - Employee Management (UI & API/DB)",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 16,
+                            "line": 20,
                             "column": 6
                           }
                         },
@@ -1046,7 +915,7 @@
                           "description": "PIM-R-003",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 322,
+                            "line": 334,
                             "column": 7
                           }
                         },
@@ -1055,7 +924,7 @@
                           "description": "System, E2E",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 322,
+                            "line": 334,
                             "column": 7
                           }
                         },
@@ -1065,48 +934,27 @@
                         },
                         {
                           "type": "Employee ID",
-                          "description": "empNumber: 226, employeeId: null"
+                          "description": "empNumber: 351, employeeId: ID-wfu0zz"
                         },
                         {
                           "type": "Teardown Action",
-                          "description": "Deleting empNumber: 226"
+                          "description": "Deleting empNumber: 351"
                         }
                       ],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--3c45b-h-Employee---By-Employee-ID-system/test-failed-1.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--3c45b-h-Employee---By-Employee-ID-system/test-failed-2.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--3c45b-h-Employee---By-Employee-ID-system/error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "column": 37,
-                        "line": 357
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "bee1601fa4b43aba1af6-6481318d94cdc4c412ce",
               "file": "system/pim/employee.spec.ts",
-              "line": 322,
+              "line": 334,
               "column": 7
             },
             {
               "title": "PIM-R-004: Search Employee - No Results Found",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -1117,7 +965,7 @@
                       "description": "PIM Module - Employee Management (UI & API/DB)",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 16,
+                        "line": 20,
                         "column": 6
                       }
                     },
@@ -1126,7 +974,7 @@
                       "description": "PIM-R-004",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 376,
+                        "line": 402,
                         "column": 7
                       }
                     },
@@ -1135,13 +983,13 @@
                       "description": "System, E2E",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 376,
+                        "line": 402,
                         "column": 7
                       }
                     },
                     {
                       "type": "Test Data",
-                      "description": "Non-existent Name: NonExistentEmployee_1782145878469"
+                      "description": "Non-existent Name: NFR-cj4hms4r3j"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -1149,30 +997,11 @@
                   "projectName": "system",
                   "results": [
                     {
-                      "workerIndex": 4,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 1572,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:401:55",
-                        "location": {
-                          "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                          "column": 55,
-                          "line": 401
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 399 |\u001b[39m       \u001b[90m// await expect(employeeListPage.getByText('No Records Found')).toBeVisible();\u001b[39m\n \u001b[90m 400 |\u001b[39m       \u001b[90m// #6: getRecordCount() returns Promise\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 401 |\u001b[39m       expect(\u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mgetRecordCount())\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 402 |\u001b[39m     }\n \u001b[90m 403 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 404 |\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "column": 55,
-                            "line": 401
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n\u001b[0m \u001b[90m 399 |\u001b[39m       \u001b[90m// await expect(employeeListPage.getByText('No Records Found')).toBeVisible();\u001b[39m\n \u001b[90m 400 |\u001b[39m       \u001b[90m// #6: getRecordCount() returns Promise\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 401 |\u001b[39m       expect(\u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mgetRecordCount())\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 402 |\u001b[39m     }\n \u001b[90m 403 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 404 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:401:55\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 2234,
+                      "errors": [],
                       "stdout": [
                         {
                           "text": "[DB] Connected to MySQL at localhost:3306/orangehrm\n"
@@ -1183,14 +1012,14 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:31:16.404Z",
+                      "startTime": "2026-07-07T20:31:01.595Z",
                       "annotations": [
                         {
                           "type": "Feature",
                           "description": "PIM Module - Employee Management (UI & API/DB)",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 16,
+                            "line": 20,
                             "column": 6
                           }
                         },
@@ -1199,7 +1028,7 @@
                           "description": "PIM-R-004",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 376,
+                            "line": 402,
                             "column": 7
                           }
                         },
@@ -1208,50 +1037,29 @@
                           "description": "System, E2E",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 376,
+                            "line": 402,
                             "column": 7
                           }
                         },
                         {
                           "type": "Test Data",
-                          "description": "Non-existent Name: NonExistentEmployee_1782145878469"
+                          "description": "Non-existent Name: NFR-cj4hms4r3j"
                         }
                       ],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--ab20a-Employee---No-Results-Found-system/test-failed-1.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--ab20a-Employee---No-Results-Found-system/test-failed-2.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--ab20a-Employee---No-Results-Found-system/error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "column": 55,
-                        "line": 401
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "bee1601fa4b43aba1af6-9ee65cfbae20c5ed2984",
               "file": "system/pim/employee.spec.ts",
-              "line": 376,
+              "line": 402,
               "column": 7
             },
             {
               "title": "PIM-R-005: Search Employee - View Employee Details",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -1262,7 +1070,7 @@
                       "description": "PIM Module - Employee Management (UI & API/DB)",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 16,
+                        "line": 20,
                         "column": 6
                       }
                     },
@@ -1271,7 +1079,7 @@
                       "description": "PIM-R-005",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 405,
+                        "line": 433,
                         "column": 7
                       }
                     },
@@ -1280,17 +1088,17 @@
                       "description": "System, E2E",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 405,
+                        "line": 433,
                         "column": 7
                       }
                     },
                     {
                       "type": "Test Data",
-                      "description": "{\"firstName\":\"Detail\",\"lastName\":\"View\"}"
+                      "description": "{\"firstName\":\"Dtl-q2wo16ox17\",\"lastName\":\"Vw-q2wo16ox17\"}"
                     },
                     {
                       "type": "Teardown Action",
-                      "description": "Deleting employee with empNumber: 227"
+                      "description": "Deleting employee with empNumber: 352"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -1298,30 +1106,11 @@
                   "projectName": "system",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 2916,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Detail' })\nExpected: visible\nError: strict mode violation: getByRole('heading', { name: 'Detail' }) resolved to 2 elements:\n    1) <h6 data-v-7b563373=\"\" data-v-af86f9aa=\"\" class=\"oxd-text oxd-text--h6 --strong\">Detail View</h6> aka getByRole('heading', { name: 'Detail View' })\n    2) <h6 data-v-7b563373=\"\" data-v-6653c066=\"\" class=\"oxd-text oxd-text--h6 orangehrm-main-title\">Personal Details</h6> aka getByRole('heading', { name: 'Personal Details' })\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Detail' })\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Detail' })\nExpected: visible\nError: strict mode violation: getByRole('heading', { name: 'Detail' }) resolved to 2 elements:\n    1) <h6 data-v-7b563373=\"\" data-v-af86f9aa=\"\" class=\"oxd-text oxd-text--h6 --strong\">Detail View</h6> aka getByRole('heading', { name: 'Detail View' })\n    2) <h6 data-v-7b563373=\"\" data-v-6653c066=\"\" class=\"oxd-text oxd-text--h6 orangehrm-main-title\">Personal Details</h6> aka getByRole('heading', { name: 'Personal Details' })\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Detail' })\u001b[22m\n\n    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:443:110",
-                        "location": {
-                          "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                          "column": 110,
-                          "line": 443
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 441 |\u001b[39m\n \u001b[90m 442 |\u001b[39m         \u001b[90m// 3. Verify that the employee's detailed profile page is displayed.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 443 |\u001b[39m         \u001b[36mawait\u001b[39m expect(authenticatedPage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m employeeData\u001b[33m.\u001b[39mfirstName\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m \u001b[90m// Assuming name is part of heading\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 444 |\u001b[39m         \u001b[36mawait\u001b[39m expect(authenticatedPage\u001b[33m.\u001b[39mlocator(\u001b[32m'.orangehrm-horizontal-padding h6'\u001b[39m)\u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m \u001b[32m'Personal Details'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 445 |\u001b[39m\n \u001b[90m 446 |\u001b[39m         \u001b[90m// 4. Verify some key information on the profile page.\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "column": 110,
-                            "line": 443
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Detail' })\nExpected: visible\nError: strict mode violation: getByRole('heading', { name: 'Detail' }) resolved to 2 elements:\n    1) <h6 data-v-7b563373=\"\" data-v-af86f9aa=\"\" class=\"oxd-text oxd-text--h6 --strong\">Detail View</h6> aka getByRole('heading', { name: 'Detail View' })\n    2) <h6 data-v-7b563373=\"\" data-v-6653c066=\"\" class=\"oxd-text oxd-text--h6 orangehrm-main-title\">Personal Details</h6> aka getByRole('heading', { name: 'Personal Details' })\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Detail' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 441 |\u001b[39m\n \u001b[90m 442 |\u001b[39m         \u001b[90m// 3. Verify that the employee's detailed profile page is displayed.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 443 |\u001b[39m         \u001b[36mawait\u001b[39m expect(authenticatedPage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m employeeData\u001b[33m.\u001b[39mfirstName\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mfalse\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m \u001b[90m// Assuming name is part of heading\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 444 |\u001b[39m         \u001b[36mawait\u001b[39m expect(authenticatedPage\u001b[33m.\u001b[39mlocator(\u001b[32m'.orangehrm-horizontal-padding h6'\u001b[39m)\u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m \u001b[32m'Personal Details'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 445 |\u001b[39m\n \u001b[90m 446 |\u001b[39m         \u001b[90m// 4. Verify some key information on the profile page.\u001b[39m\u001b[0m\n\u001b[2m    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:443:110\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 4018,
+                      "errors": [],
                       "stdout": [
                         {
                           "text": "[DB] Connected to MySQL at localhost:3306/orangehrm\n"
@@ -1332,14 +1121,14 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:31:20.645Z",
+                      "startTime": "2026-07-07T20:31:03.842Z",
                       "annotations": [
                         {
                           "type": "Feature",
                           "description": "PIM Module - Employee Management (UI & API/DB)",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 16,
+                            "line": 20,
                             "column": 6
                           }
                         },
@@ -1348,7 +1137,7 @@
                           "description": "PIM-R-005",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 405,
+                            "line": 433,
                             "column": 7
                           }
                         },
@@ -1357,49 +1146,28 @@
                           "description": "System, E2E",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 405,
+                            "line": 433,
                             "column": 7
                           }
                         },
                         {
                           "type": "Test Data",
-                          "description": "{\"firstName\":\"Detail\",\"lastName\":\"View\"}"
+                          "description": "{\"firstName\":\"Dtl-q2wo16ox17\",\"lastName\":\"Vw-q2wo16ox17\"}"
                         },
                         {
                           "type": "Teardown Action",
-                          "description": "Deleting employee with empNumber: 227"
+                          "description": "Deleting employee with empNumber: 352"
                         }
                       ],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--e2ef6-yee---View-Employee-Details-system/test-failed-1.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--e2ef6-yee---View-Employee-Details-system/test-failed-2.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--e2ef6-yee---View-Employee-Details-system/error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "column": 110,
-                        "line": 443
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "bee1601fa4b43aba1af6-84370007dfe18b711a3c",
               "file": "system/pim/employee.spec.ts",
-              "line": 405,
+              "line": 433,
               "column": 7
             },
             {
@@ -1415,7 +1183,7 @@
                       "description": "PIM Module - Employee Management (UI & API/DB)",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 16,
+                        "line": 20,
                         "column": 6
                       }
                     },
@@ -1424,7 +1192,7 @@
                       "description": "PIM-U-001",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 468,
+                        "line": 499,
                         "column": 8
                       }
                     },
@@ -1433,7 +1201,7 @@
                       "description": "System, E2E",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 468,
+                        "line": 499,
                         "column": 8
                       }
                     },
@@ -1441,7 +1209,7 @@
                       "type": "skip",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 468,
+                        "line": 499,
                         "column": 8
                       }
                     }
@@ -1451,7 +1219,7 @@
                   "projectName": "system",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "skipped",
                       "duration": 0,
@@ -1459,14 +1227,14 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:31:26.300Z",
+                      "startTime": "2026-07-07T20:31:07.873Z",
                       "annotations": [
                         {
                           "type": "Feature",
                           "description": "PIM Module - Employee Management (UI & API/DB)",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 16,
+                            "line": 20,
                             "column": 6
                           }
                         },
@@ -1475,7 +1243,7 @@
                           "description": "PIM-U-001",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 468,
+                            "line": 499,
                             "column": 8
                           }
                         },
@@ -1484,7 +1252,7 @@
                           "description": "System, E2E",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 468,
+                            "line": 499,
                             "column": 8
                           }
                         },
@@ -1492,7 +1260,7 @@
                           "type": "skip",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 468,
+                            "line": 499,
                             "column": 8
                           }
                         }
@@ -1505,7 +1273,7 @@
               ],
               "id": "bee1601fa4b43aba1af6-921e73e16ed58e6f0421",
               "file": "system/pim/employee.spec.ts",
-              "line": 468,
+              "line": 499,
               "column": 8
             },
             {
@@ -1521,7 +1289,7 @@
                       "description": "PIM Module - Employee Management (UI & API/DB)",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 16,
+                        "line": 20,
                         "column": 6
                       }
                     },
@@ -1530,7 +1298,7 @@
                       "description": "PIM-U-002",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 484,
+                        "line": 515,
                         "column": 8
                       }
                     },
@@ -1539,7 +1307,7 @@
                       "description": "System, E2E",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 484,
+                        "line": 515,
                         "column": 8
                       }
                     },
@@ -1547,7 +1315,7 @@
                       "type": "skip",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 484,
+                        "line": 515,
                         "column": 8
                       }
                     }
@@ -1557,7 +1325,7 @@
                   "projectName": "system",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "skipped",
                       "duration": 0,
@@ -1565,14 +1333,14 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:31:26.301Z",
+                      "startTime": "2026-07-07T20:31:07.874Z",
                       "annotations": [
                         {
                           "type": "Feature",
                           "description": "PIM Module - Employee Management (UI & API/DB)",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 16,
+                            "line": 20,
                             "column": 6
                           }
                         },
@@ -1581,7 +1349,7 @@
                           "description": "PIM-U-002",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 484,
+                            "line": 515,
                             "column": 8
                           }
                         },
@@ -1590,7 +1358,7 @@
                           "description": "System, E2E",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 484,
+                            "line": 515,
                             "column": 8
                           }
                         },
@@ -1598,7 +1366,7 @@
                           "type": "skip",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 484,
+                            "line": 515,
                             "column": 8
                           }
                         }
@@ -1611,12 +1379,12 @@
               ],
               "id": "bee1601fa4b43aba1af6-e8fce50dffd8a74ab5cd",
               "file": "system/pim/employee.spec.ts",
-              "line": 484,
+              "line": 515,
               "column": 8
             },
             {
               "title": "PIM-D-001: Delete Single Employee (UI)",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -1627,7 +1395,7 @@
                       "description": "PIM Module - Employee Management (UI & API/DB)",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 16,
+                        "line": 20,
                         "column": 6
                       }
                     },
@@ -1636,7 +1404,7 @@
                       "description": "PIM-D-001",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 500,
+                        "line": 531,
                         "column": 7
                       }
                     },
@@ -1645,17 +1413,17 @@
                       "description": "System, E2E",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 500,
+                        "line": 531,
                         "column": 7
                       }
                     },
                     {
                       "type": "Test Data",
-                      "description": "{\"firstName\":\"DeleteMe\",\"lastName\":\"Single\"}"
+                      "description": "{\"firstName\":\"DelS-f9pw90n9pg\",\"lastName\":\"Sngl-f9pw90n9pg\"}"
                     },
                     {
                       "type": "Teardown Action",
-                      "description": "Final cleanup for empNumber: 228"
+                      "description": "Final cleanup for empNumber: 353"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -1663,30 +1431,11 @@
                   "projectName": "system",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 12283,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No Records Found')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No Records Found')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No Records Found')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No Records Found')\u001b[22m\n\n    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:552:70",
-                        "location": {
-                          "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                          "column": 70,
-                          "line": 552
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 550 |\u001b[39m         \u001b[90m// 7. Verify the employee is no longer present in the results table.\u001b[39m\n \u001b[90m 551 |\u001b[39m         \u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39msearchByName(employeeData\u001b[33m.\u001b[39mfirstName)\u001b[33m;\u001b[39m \u001b[90m// Re-search to confirm absence\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 552 |\u001b[39m         \u001b[36mawait\u001b[39m expect(employeeListPage\u001b[33m.\u001b[39mgetByText(\u001b[32m'No Records Found'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 553 |\u001b[39m         \u001b[90m// #6: getRecordCount() returns Promise\u001b[39m\n \u001b[90m 554 |\u001b[39m         expect(\u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mgetRecordCount())\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 555 |\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "column": 70,
-                            "line": 552
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No Records Found')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No Records Found')\u001b[22m\n\n\n\u001b[0m \u001b[90m 550 |\u001b[39m         \u001b[90m// 7. Verify the employee is no longer present in the results table.\u001b[39m\n \u001b[90m 551 |\u001b[39m         \u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39msearchByName(employeeData\u001b[33m.\u001b[39mfirstName)\u001b[33m;\u001b[39m \u001b[90m// Re-search to confirm absence\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 552 |\u001b[39m         \u001b[36mawait\u001b[39m expect(employeeListPage\u001b[33m.\u001b[39mgetByText(\u001b[32m'No Records Found'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 553 |\u001b[39m         \u001b[90m// #6: getRecordCount() returns Promise\u001b[39m\n \u001b[90m 554 |\u001b[39m         expect(\u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mgetRecordCount())\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 555 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:552:70\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 5231,
+                      "errors": [],
                       "stdout": [
                         {
                           "text": "[DB] Connected to MySQL at localhost:3306/orangehrm\n"
@@ -1697,14 +1446,14 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:31:26.302Z",
+                      "startTime": "2026-07-07T20:31:07.874Z",
                       "annotations": [
                         {
                           "type": "Feature",
                           "description": "PIM Module - Employee Management (UI & API/DB)",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 16,
+                            "line": 20,
                             "column": 6
                           }
                         },
@@ -1713,7 +1462,7 @@
                           "description": "PIM-D-001",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 500,
+                            "line": 531,
                             "column": 7
                           }
                         },
@@ -1722,54 +1471,33 @@
                           "description": "System, E2E",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 500,
+                            "line": 531,
                             "column": 7
                           }
                         },
                         {
                           "type": "Test Data",
-                          "description": "{\"firstName\":\"DeleteMe\",\"lastName\":\"Single\"}"
+                          "description": "{\"firstName\":\"DelS-f9pw90n9pg\",\"lastName\":\"Sngl-f9pw90n9pg\"}"
                         },
                         {
                           "type": "Teardown Action",
-                          "description": "Final cleanup for empNumber: 228"
+                          "description": "Final cleanup for empNumber: 353"
                         }
                       ],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--bcde2--Delete-Single-Employee-UI--system/test-failed-1.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--bcde2--Delete-Single-Employee-UI--system/test-failed-2.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--bcde2--Delete-Single-Employee-UI--system/error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "column": 70,
-                        "line": 552
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "bee1601fa4b43aba1af6-f2e0924af750b193c987",
               "file": "system/pim/employee.spec.ts",
-              "line": 500,
+              "line": 531,
               "column": 7
             },
             {
               "title": "PIM-D-002: Delete Multiple Employees (UI)",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -1780,7 +1508,7 @@
                       "description": "PIM Module - Employee Management (UI & API/DB)",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 16,
+                        "line": 20,
                         "column": 6
                       }
                     },
@@ -1789,7 +1517,7 @@
                       "description": "PIM-D-002",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 574,
+                        "line": 620,
                         "column": 7
                       }
                     },
@@ -1798,17 +1526,17 @@
                       "description": "System, E2E",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 574,
+                        "line": 620,
                         "column": 7
                       }
                     },
                     {
                       "type": "Test Data",
-                      "description": "[{\"firstName\":\"MultiDelete1\",\"lastName\":\"First\"},{\"firstName\":\"MultiDelete2\",\"lastName\":\"Second\"}]"
+                      "description": "[{\"firstName\":\"MltDel-fcavgkafar-1\",\"lastName\":\"Alpha\"},{\"firstName\":\"MltDel-fcavgkafar-2\",\"lastName\":\"Beta\"}]"
                     },
                     {
                       "type": "Teardown Action",
-                      "description": "Final cleanup for empNumbers: 229, 230"
+                      "description": "Final cleanup for empNumbers: 354, 355"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -1816,30 +1544,11 @@
                   "projectName": "system",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 12014,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No Records Found')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No Records Found')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No Records Found')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No Records Found')\u001b[22m\n\n    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:627:70",
-                        "location": {
-                          "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                          "column": 70,
-                          "line": 627
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 625 |\u001b[39m         \u001b[90m// 7. Verify the selected employees are no longer present in the results table.\u001b[39m\n \u001b[90m 626 |\u001b[39m         \u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39msearchByName(\u001b[32m'MultiDelete'\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Re-search\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 627 |\u001b[39m         \u001b[36mawait\u001b[39m expect(employeeListPage\u001b[33m.\u001b[39mgetByText(\u001b[32m'No Records Found'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 628 |\u001b[39m         \u001b[90m// #6: getRecordCount() returns Promise\u001b[39m\n \u001b[90m 629 |\u001b[39m         expect(\u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mgetRecordCount())\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 630 |\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "column": 70,
-                            "line": 627
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('No Records Found')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByText('No Records Found')\u001b[22m\n\n\n\u001b[0m \u001b[90m 625 |\u001b[39m         \u001b[90m// 7. Verify the selected employees are no longer present in the results table.\u001b[39m\n \u001b[90m 626 |\u001b[39m         \u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39msearchByName(\u001b[32m'MultiDelete'\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// Re-search\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 627 |\u001b[39m         \u001b[36mawait\u001b[39m expect(employeeListPage\u001b[33m.\u001b[39mgetByText(\u001b[32m'No Records Found'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 628 |\u001b[39m         \u001b[90m// #6: getRecordCount() returns Promise\u001b[39m\n \u001b[90m 629 |\u001b[39m         expect(\u001b[36mawait\u001b[39m employeeListPage\u001b[33m.\u001b[39mgetRecordCount())\u001b[33m.\u001b[39mtoBe(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 630 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts:627:70\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 3887,
+                      "errors": [],
                       "stdout": [
                         {
                           "text": "[DB] Connected to MySQL at localhost:3306/orangehrm\n"
@@ -1850,14 +1559,14 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:31:41.616Z",
+                      "startTime": "2026-07-07T20:31:13.118Z",
                       "annotations": [
                         {
                           "type": "Feature",
                           "description": "PIM Module - Employee Management (UI & API/DB)",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 16,
+                            "line": 20,
                             "column": 6
                           }
                         },
@@ -1866,7 +1575,7 @@
                           "description": "PIM-D-002",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 574,
+                            "line": 620,
                             "column": 7
                           }
                         },
@@ -1875,49 +1584,28 @@
                           "description": "System, E2E",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 574,
+                            "line": 620,
                             "column": 7
                           }
                         },
                         {
                           "type": "Test Data",
-                          "description": "[{\"firstName\":\"MultiDelete1\",\"lastName\":\"First\"},{\"firstName\":\"MultiDelete2\",\"lastName\":\"Second\"}]"
+                          "description": "[{\"firstName\":\"MltDel-fcavgkafar-1\",\"lastName\":\"Alpha\"},{\"firstName\":\"MltDel-fcavgkafar-2\",\"lastName\":\"Beta\"}]"
                         },
                         {
                           "type": "Teardown Action",
-                          "description": "Final cleanup for empNumbers: 229, 230"
+                          "description": "Final cleanup for empNumbers: 354, 355"
                         }
                       ],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--2eba6-lete-Multiple-Employees-UI--system/test-failed-1.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--2eba6-lete-Multiple-Employees-UI--system/test-failed-2.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/pim-employee-PIM-Employee--2eba6-lete-Multiple-Employees-UI--system/error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "column": 70,
-                        "line": 627
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "bee1601fa4b43aba1af6-98efd0997be45582eca1",
               "file": "system/pim/employee.spec.ts",
-              "line": 574,
+              "line": 620,
               "column": 7
             },
             {
@@ -1933,7 +1621,7 @@
                       "description": "PIM Module - Employee Management (UI & API/DB)",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 16,
+                        "line": 20,
                         "column": 6
                       }
                     },
@@ -1942,7 +1630,7 @@
                       "description": "PIM-D-003",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 652,
+                        "line": 714,
                         "column": 7
                       }
                     },
@@ -1951,17 +1639,17 @@
                       "description": "System, E2E",
                       "location": {
                         "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                        "line": 652,
+                        "line": 714,
                         "column": 7
                       }
                     },
                     {
                       "type": "Test Data",
-                      "description": "{\"firstName\":\"DoNotDelete\",\"lastName\":\"Cancel\"}"
+                      "description": "{\"firstName\":\"Cncl-0ta3eiq3dr\",\"lastName\":\"Del-0ta3eiq3dr\"}"
                     },
                     {
                       "type": "Teardown Action",
-                      "description": "Deleting employee with empNumber: 231"
+                      "description": "Deleting employee with empNumber: 356"
                     }
                   ],
                   "expectedStatus": "passed",
@@ -1969,10 +1657,10 @@
                   "projectName": "system",
                   "results": [
                     {
-                      "workerIndex": 8,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1830,
+                      "duration": 4958,
                       "errors": [],
                       "stdout": [
                         {
@@ -1984,14 +1672,14 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-06-22T16:31:56.211Z",
+                      "startTime": "2026-07-07T20:31:17.017Z",
                       "annotations": [
                         {
                           "type": "Feature",
                           "description": "PIM Module - Employee Management (UI & API/DB)",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 16,
+                            "line": 20,
                             "column": 6
                           }
                         },
@@ -2000,7 +1688,7 @@
                           "description": "PIM-D-003",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 652,
+                            "line": 714,
                             "column": 7
                           }
                         },
@@ -2009,17 +1697,17 @@
                           "description": "System, E2E",
                           "location": {
                             "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/system/pim/employee.spec.ts",
-                            "line": 652,
+                            "line": 714,
                             "column": 7
                           }
                         },
                         {
                           "type": "Test Data",
-                          "description": "{\"firstName\":\"DoNotDelete\",\"lastName\":\"Cancel\"}"
+                          "description": "{\"firstName\":\"Cncl-0ta3eiq3dr\",\"lastName\":\"Del-0ta3eiq3dr\"}"
                         },
                         {
                           "type": "Teardown Action",
-                          "description": "Deleting employee with empNumber: 231"
+                          "description": "Deleting employee with empNumber: 356"
                         }
                       ],
                       "attachments": []
@@ -2030,7 +1718,7 @@
               ],
               "id": "bee1601fa4b43aba1af6-a8e3c2224e372be16d1f",
               "file": "system/pim/employee.spec.ts",
-              "line": 652,
+              "line": 714,
               "column": 7
             }
           ]
@@ -2040,11 +1728,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-22T16:30:32.189Z",
-    "duration": 87828.072,
-    "expected": 6,
+    "startTime": "2026-07-07T20:30:40.223Z",
+    "duration": 41858.466,
+    "expected": 14,
     "skipped": 2,
-    "unexpected": 8,
+    "unexpected": 0,
     "flaky": 0
   }
 }
