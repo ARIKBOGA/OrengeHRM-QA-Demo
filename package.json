@@ -20,7 +20,9 @@
         "test:system:heal": "npm run test:system; npm run report:failures && npm run heal:all",
         "docker:up": "docker compose -f docker/docker-compose.yml up -d",
         "docker:down": "docker compose -f docker/docker-compose.yml down -v",
-        "typecheck": "tsc --noEmit"
+        "typecheck": "tsc --noEmit",
+        "docs:state": "ts-node scripts/generate-project-state.ts",
+        "docs:refresh": "npm run context:extract && npm run docs:state"
     },
     "dependencies": {
         "@google/generative-ai": "^0.21.0",
