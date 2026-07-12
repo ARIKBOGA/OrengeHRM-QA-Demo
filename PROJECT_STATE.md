@@ -103,6 +103,11 @@ Full detail lives in `agents/healer/prompt.ts` under "KNOWN ISSUES." Summary:
     consistently-wrong result that looks like dirty data, timing, or a stale
     counter. The only reliable way to catch it: run the test in `--debug` and
     watch it type.
+12. **Playwright fixtures inject `baseURL` automatically; standalone scripts
+    (globalSetup-style, outside test context) don't get this for free.**
+    Any `browser.newContext()` created manually must explicitly pass
+    `{ baseURL: config.baseUrl }`, or relative `page.goto()` calls fail
+    with "Cannot navigate to invalid URL."
 
 ---
 
