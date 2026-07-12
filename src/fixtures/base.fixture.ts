@@ -7,12 +7,11 @@
  *   import { test, expect } from '@fixtures/base.fixture';
  */
 // src/fixtures/base.fixture.ts
-import { mergeTests, request, APIRequestContext } from '@playwright/test';
-import { authFixture } from './auth.fixture';
+import { APIRequestContext, mergeTests, request } from '@playwright/test';
 import { apiFixture } from './api.fixture';
+import { authFixture } from './auth.fixture';
 import { dbFixture } from './db.fixture';
 import { test as pomTest } from './pom.fixture';
-import { config } from '@config/env';
 
 type AuthenticatedApiFixture = {
   authenticatedApi: APIRequestContext;
