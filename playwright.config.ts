@@ -2,6 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 import { config } from './src/config/env';
 
 export default defineConfig({
+  //globalSetup: './scripts/global-setup.ts',
   testDir: './tests',
   fullyParallel: false,
   forbidOnly: !!process.env.CI,

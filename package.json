@@ -18,7 +18,7 @@
         "report:failures": "ts-node scripts/build-failure-report.ts",
         "heal:all": "ts-node scripts/heal-all.ts",
         "test:system:heal": "npm run test:system; npm run report:failures && npm run heal:all",
-        "docker:up": "docker compose -f docker/docker-compose.yml up -d",
+        "docker:up": "docker compose -f docker/docker-compose.yml up -d && ts-node scripts/seed-leave-prerequisites.ts",
         "docker:down": "docker compose -f docker/docker-compose.yml down -v",
         "typecheck": "tsc --noEmit",
         "docs:state": "ts-node scripts/generate-project-state.ts",
