@@ -16,30 +16,31 @@ export class RequestUtil {
 
   async post<T>(endpoint: string, body: unknown): Promise<T> {
     const response = await this.ctx.post(this.buildPath(endpoint), { data: body });
-    this.assertOk(response, 'POST', endpoint);
+    await this.assertOk(response, 'POST', endpoint);
     return response.json() as Promise<T>;
   }
 
   async get<T>(endpoint: string, params?: Record<string, string | number>): Promise<T> {
     const response = await this.ctx.get(this.buildPath(endpoint), { params: params as Record<string, string> });
-    this.assertOk(response, 'GET', endpoint);
+    await this.assertOk(response, 'GET', endpoint);
     return response.json() as Promise<T>;
   }
 
   async put<T>(endpoint: string, body: unknown): Promise<T> {
     const response = await this.ctx.put(this.buildPath(endpoint), { data: body });
-    this.assertOk(response, 'PUT', endpoint);
+    await this.assertOk(response, 'PUT', endpoint);
     return response.json() as Promise<T>;
   }
 
   async delete(endpoint: string, body?: unknown): Promise<void> {
     const response = await this.ctx.delete(this.buildPath(endpoint), body ? { data: body } : undefined);
-    this.assertOk(response, 'DELETE', endpoint);
+    await this.assertOk(response, 'DELETE', endpoint);
   }
 
-  private assertOk(response: Awaited<ReturnType<APIRequestContext['get']>>, method: string, endpoint: string): void {
+  private async assertOk(response: Awaited<ReturnType<APIRequestContext['get']>>, method: string, endpoint: string): Promise<void> {
     if (!response.ok()) {
-      throw new Error(`${method} ${endpoint} failed with status ${response.status()}`);
+      const bodyText = await response.text().catch(() => '<unreadable body>');
+      throw new Error(`${method} ${endpoint} failed with status ${response.status()}: ${bodyText}`);
     }
 
     // #10: HTTP 200 for all operations — never expect 201 or 204.
