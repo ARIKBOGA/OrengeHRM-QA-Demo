@@ -100,26 +100,28 @@ async function ensureWorkweek(api: Awaited<ReturnType<typeof request.newContext>
   const body = await res.json();
   const days = body.data;
 
+  // NOTE: counter-intuitively, 0 = working day, 8 = WORKWEEK_LENGTH_NON_WORKING_DAY.
+  // See known-behaviors.md → "Workweek values are inverted."
   const weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'] as const;
-  const needsFix = weekdays.some((day) => days[day] !== 8);
+  const needsFix = weekdays.some((day) => days[day] !== 0);
 
   if (!needsFix) {
-    console.info('  • Workweek already correct (Mon–Fri = 8h) — skipping.');
+    console.info('  • Workweek already correct (Mon–Fri = working) — skipping.');
     return;
   }
 
   await api.put('/web/index.php/api/v2/leave/workweek', {
     data: {
-      monday: 8,
-      tuesday: 8,
-      wednesday: 8,
-      thursday: 8,
-      friday: 8,
-      saturday: 0,
-      sunday: 0,
+      monday: 0,
+      tuesday: 0,
+      wednesday: 0,
+      thursday: 0,
+      friday: 0,
+      saturday: 8,
+      sunday: 8,
     },
   });
-  console.info('  • Workweek corrected to Mon–Fri = 8h, Sat/Sun = 0h.');
+  console.info('  • Workweek corrected: Mon–Fri = working (0), Sat/Sun = non-working (8).');
 }
 
 main().catch((err) => {

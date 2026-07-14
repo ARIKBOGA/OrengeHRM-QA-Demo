@@ -13,9 +13,9 @@ export interface LeaveRequestData {
  * LeaveTypeUtil.createLeaveType() first. Hardcoding "1" assumes seed
  * order that isn't guaranteed once more types exist.
  *
- * IMPORTANT: fromDate/toDate default to a 2-day range — single-day
- * requests always fail on this OrangeHRM version (see known-behaviors.md).
- * Defaults land on a Mon–Tue pair to stay clear of the weekend.
+ * Default range is a single working day (Wednesday) — single-day and
+ * multi-day requests both work correctly once the workweek is properly
+ * provisioned (see known-behaviors.md).
  */
 export function createLeaveRequest(
   leaveTypeId: number,
@@ -23,8 +23,8 @@ export function createLeaveRequest(
 ): LeaveRequestData {
   return {
     leaveTypeId,
-    fromDate: '2026-08-10', // Monday
-    toDate: '2026-08-11',   // Tuesday
+    fromDate: '2026-08-12', // Wednesday
+    toDate: '2026-08-12',
     duration: { type: 'full_day' },
     ...overrides,
   };
