@@ -120,12 +120,12 @@
         {
           "title": "Leave Assign — Integration",
           "file": "integration/leave/leave-assign.integration.spec.ts",
-          "line": 12,
+          "line": 14,
           "column": 6,
           "specs": [
             {
-              "title": "LEAVE-A-001: Assign Leave uses the exact leave type provided, not a default",
-              "ok": false,
+              "title": "LEAVE-A-001: Assign → verify → cancel → verify, leaving zero residue",
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -138,28 +138,9 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 433,
-                      "error": {
-                        "message": "Error: POST /api/v2/leave/employees/leave-requests failed with status 400: {\"error\":{\"status\":\"400\",\"message\":\"Failed to Submit: No Working Days Selected\"}}",
-                        "stack": "Error: POST /api/v2/leave/employees/leave-requests failed with status 400: {\"error\":{\"status\":\"400\",\"message\":\"Failed to Submit: No Working Days Selected\"}}\n    at RequestUtil.assertOk (/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/src/utils/api/request.util.ts:43:13)\n    at RequestUtil.post (/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/src/utils/api/request.util.ts:19:5)\n    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/integration/leave/leave-assign.integration.spec.ts:25:24",
-                        "location": {
-                          "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/src/utils/api/request.util.ts",
-                          "column": 13,
-                          "line": 43
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39m../src/utils/api/request.util.ts:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok()) {\n \u001b[90m 42 |\u001b[39m       \u001b[36mconst\u001b[39m bodyText \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[32m'<unreadable body>'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m       \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`${method} ${endpoint} failed with status ${response.status()}: ${bodyText}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     }\n \u001b[90m 45 |\u001b[39m\n \u001b[90m 46 |\u001b[39m     \u001b[90m// #10: HTTP 200 for all operations — never expect 201 or 204.\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/src/utils/api/request.util.ts",
-                            "column": 13,
-                            "line": 43
-                          },
-                          "message": "Error: POST /api/v2/leave/employees/leave-requests failed with status 400: {\"error\":{\"status\":\"400\",\"message\":\"Failed to Submit: No Working Days Selected\"}}\n\n\u001b[90m   at \u001b[39m../src/utils/api/request.util.ts:43\n\n\u001b[0m \u001b[90m 41 |\u001b[39m     \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok()) {\n \u001b[90m 42 |\u001b[39m       \u001b[36mconst\u001b[39m bodyText \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mtext()\u001b[33m.\u001b[39m\u001b[36mcatch\u001b[39m(() \u001b[33m=>\u001b[39m \u001b[32m'<unreadable body>'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m       \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`${method} ${endpoint} failed with status ${response.status()}: ${bodyText}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m     }\n \u001b[90m 45 |\u001b[39m\n \u001b[90m 46 |\u001b[39m     \u001b[90m// #10: HTTP 200 for all operations — never expect 201 or 204.\u001b[39m\u001b[0m\n\u001b[2m    at RequestUtil.assertOk (/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/src/utils/api/request.util.ts:43:13)\u001b[22m\n\u001b[2m    at RequestUtil.post (/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/src/utils/api/request.util.ts:19:5)\u001b[22m\n\u001b[2m    at /Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/tests/integration/leave/leave-assign.integration.spec.ts:25:24\u001b[22m"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 605,
+                      "errors": [],
                       "stdout": [
                         {
                           "text": "[DB] Connected to MySQL at localhost:3306/orangehrm\n"
@@ -170,33 +151,17 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-07-12T20:20:19.121Z",
+                      "startTime": "2026-07-14T08:54:11.828Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/leave-leave-assign.integra-70bf4-type-provided-not-a-default-integration/test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/test-results/leave-leave-assign.integra-70bf4-type-provided-not-a-default-integration/error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/burakarikboga/Desktop/Projects/AI/QA_Base_Framework/orangehrm-qa/src/utils/api/request.util.ts",
-                        "column": 13,
-                        "line": 43
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
-              "id": "7abaf513168d28af84bd-a047bcdc4e214f3ac104",
+              "id": "7abaf513168d28af84bd-1b5c39a0bc76939e9b3e",
               "file": "integration/leave/leave-assign.integration.spec.ts",
-              "line": 19,
+              "line": 22,
               "column": 7
             }
           ]
@@ -206,11 +171,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-07-12T20:20:18.486Z",
-    "duration": 3084.926,
-    "expected": 0,
+    "startTime": "2026-07-14T08:54:11.175Z",
+    "duration": 3226.4300000000003,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }
