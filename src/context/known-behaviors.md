@@ -78,6 +78,7 @@ Dynamically generated values from factories may exceed this limit — use a fixe
 | maritalStatus | emp_marital_status |
 | nationalityId | nation_code        |
 
+---
 
 ## Leave Module Prerequisites
 
@@ -95,40 +96,68 @@ returns opaque errors (500, or a 400 with a misleading-until-you-know-it message
    from `GET /leave-types`. Create one via `POST /leave-types` before
    referencing any `leaveTypeId`.
 
-3. **Workweek values are hours, not booleans.** `PUT /workweek` rejects
-   `1`/`0` style booleans for weekdays (422) — use actual hour values
-   (e.g. `8` for a full working day, `0` for non-working). **This seed's
-   default workweek has Sat/Sun = 8 (working) and Mon–Fri = 0
-   (non-working)** — inverted from a real-world expectation. Leave
-   requests spanning only "0-hour" days fail with
-   `400: Failed to Submit: No Working Days Selected`.
+3. **Workweek values are INVERTED from intuitive expectation — this took
+   two rounds to get right, document carefully.**
+
+   `PUT /workweek` accepts an integer per day, but the meaning is the
+   opposite of what "hours worked" suggests:
+   **`0` = working day, `8` = `WorkWeek::WORKWEEK_LENGTH_NON_WORKING_DAY`
+   (non-working day).**
+
+   Root cause, traced through source:
+   `LeaveApplicationService::saveLeaveRequest()` →
+   `AbstractLeaveAllocationService::isWeekend()` →
+   `BasicWorkSchedule::isNonWorkingDay()` →
+   `WorkWeekDao::isNonWorkingDay()`, which does:
+   ```php
+   $getter = 'get' . $date->format('l'); // e.g. getMonday()
+   return ($workWeek->$getter() == WorkWeek::WORKWEEK_LENGTH_NON_WORKING_DAY); // == 8
+   ```
+   So any day whose stored value equals `8` is treated as non-working.
+
+   Fresh Docker seed ships with Sat/Sun = 8, Mon–Fri = 0 — this is
+   CORRECT out of the box (weekend non-working, weekdays working). We
+   initially misread this as inverted and "corrected" it to
+   `{monday: 8, ..., saturday: 0}`, which actually flipped the workweek
+   backwards — Mon–Fri became non-working, causing every weekday leave
+   request to fail with `400: Failed to Submit: No Working Days Selected`
+   regardless of which weekday was chosen. Confirmed via direct DB
+   inspection (`ohrm_work_week` table, single row, columns `mon`..`sun`)
+   and source trace, not by guessing.
+
+   **Correct provisioning (now in `scripts/seed-leave-prerequisites.ts`,
+   chained into `npm run docker:up` — no manual curl needed):**
+   ```json
+   { "monday": 0, "tuesday": 0, "wednesday": 0, "thursday": 0, "friday": 0, "saturday": 8, "sunday": 8 }
+   ```
 
 4. **At least one Leave Entitlement per (employee, leaveType) is likely
    required** for a request to actually be approvable/deducted — not yet
    confirmed, pending the next test (see Sprint 1 log).
 
-These are now auto-provisioned by `scripts/seed-leave-prerequisites.ts`,
-chained into `npm run docker:up` — no manual curl needed for future runs.
+### RETRACTED — "single-day leave requests always fail"
 
-### Single-day leave requests always fail
+An earlier version of this document claimed single-day leave requests
+(`fromDate === toDate`) always fail with `400: Failed to Submit: No
+Working Days Selected`, and recommended a 2-day-minimum workaround for
+all leave test data.
 
-Both `POST /leave/leave-requests` (self-service apply) and
-`POST /leave/employees/leave-requests` (admin assign) reject ANY
-single-day request (`fromDate === toDate`) with `400: Failed to Submit:
-No Working Days Selected` — confirmed on multiple different weekdays
-(Monday, Wednesday), with a correctly configured Mon–Fri workweek.
+**This was false.** The tests behind that finding were run while the
+workweek was in the inverted/broken state described above (Mon–Fri
+incorrectly set to `8` = non-working). Once the workweek was corrected
+(Mon–Fri = `0` = working), a single-day request succeeded immediately:
 
-This is not a date/timezone issue — `DateTimeHelperService::dateRange()`
-uses a do-while loop that correctly includes the single day. The bug is
-further downstream, likely in how `isWeekend()`/`isHoliday()` classify
-that single day. Root cause not fully traced past this point — not worth
-further investigation, since the workaround is simple and total.
+```bash
+curl -X POST ".../api/v2/leave/employees/leave-requests" \
+  -d '{"empNumber":1,"leaveTypeId":1,"fromDate":"2026-08-12","toDate":"2026-08-12","duration":{"type":"full_day"}}'
+# → 200, leave request id created successfully
+```
 
-**Workaround — required for ALL leave test data, both flows:**
-always use a minimum 2-day range (e.g. `fromDate: "2026-08-10",
-toDate: "2026-08-11"`), even for scenarios that conceptually represent
-"one day off."
-
+**Lesson:** re-verify a "confirmed" bug after fixing an unrelated,
+earlier-in-the-chain misconfiguration — a downstream symptom can
+disappear once the real upstream cause is fixed. No 2-day-minimum
+workaround is needed; single-day and multi-day ranges both work
+correctly once the workweek is provisioned as intended.
 
 ### Postman's AI-generated docs can be wrong too
 
