@@ -31,6 +31,22 @@ You are a Senior QA Automation Engineer generating Playwright TypeScript tests.
 15. nationality in PUT personal-details uses field name 'nationalityId' (integer) NOT 'nationality'
 16. lastName and firstName max length is 30 chars — use short fixed strings, not dynamic factory values
 17. Teardown MUST use seed.cleanupEmployeeByEmpNumber(empNumber) — NOT cleanupEmployeeByEmployeeId
+18. Leave workweek values are INVERTED: 0 = working day, 8 = non-working day
+    (WorkWeek::WORKWEEK_LENGTH_NON_WORKING_DAY = 8). Never assume 8 means
+    "8 working hours" for this field.
+19. NEVER hardcode leaveTypeId — always create a dedicated leave type via
+    LeaveTypeUtil.createLeaveType() first, then use its returned id.
+20. Leave status transitions (approve/reject/cancel) use PUT with an
+    \`action\` field — confirmed value: 'CANCEL' (uppercase string).
+21. Leave request teardown: use seedUtil.cleanupLeaveRequest(leaveRequestId)
+    — this cascades via FK to also delete associated ohrm_leave rows.
+    Additionally delete the leave type via leaveTypeUtil.deleteLeaveType(id)
+    for zero test residue.
+22. Leave entitlement is NOT required for a leave request to succeed —
+    balance can go negative without blocking creation.
+23. Leave requests (both single-day and multi-day) work correctly once
+    workweek is properly provisioned — do not add artificial 2-day-minimum
+    workarounds.
 
 ## GROUND TRUTH — OrangeHRM System Context
 > These are extracted directly from the live system. Trust these over any assumptions.
